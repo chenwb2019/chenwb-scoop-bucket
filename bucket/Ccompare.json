@@ -7,7 +7,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/cxasm/cc-compare/releases/download/v1.24/CCompare-v1.24-x64-Installer.exe#/dl.7z",
-            "hash": "sha256:631407db2956f8829c82f6c525313681211147b08defcbcaa2c9d075f43a62fe"
+            "hash": "e5bce6532bad5fe68c5071b6bf5bb40e051f5b644d584548c97ae2013c5c8498"
         }
     },
     "bin": "CCompare.exe",
