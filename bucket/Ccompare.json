@@ -1,13 +1,13 @@
 {
-    "version": "1.24",
+    "version": "1.21",
     "description": "A code synchronization and comparison tool that can be used for free.",
     "homepage": "https://gitee.com/cxasm/cc-compare",
     "license": "LGPL-3.0",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cxasm/cc-compare/releases/download/v1.24/CCompare-v1.24-x64-Installer.exe#/dl.7z",
-            "hash": "e5bce6532bad5fe68c5071b6bf5bb40e051f5b644d584548c97ae2013c5c8498"
+            "url": "https://gitee.com/cxasm/cc-compare/releases/download/ccompare-v1.24/CCompare-v1.24-x64-Installer.exe#/dl.7z",
+            "hash": "sha256:631407db2956f8829c82f6c525313681211147b08defcbcaa2c9d075f43a62fe"
         }
     },
     "bin": "CCompare.exe",
@@ -16,5 +16,16 @@
             "CCompare.exe",
             "CCompare"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://gitee.com/cxasm/cc-compare/releases",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gitee.com/cxasm/cc-compare/releases/download/ccompare-v$version/CCompare-v$version-x64-Installer.exe#/dl.7z"
+            }
+        }
+    }
 }
