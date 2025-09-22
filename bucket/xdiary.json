@@ -1,0 +1,39 @@
+{
+    "version": "3",
+    "description": "xDiary - A simple and elegant calender desk.",
+    "homepage": "https://www.xdiarys.com/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.xdiarys.com/windows/xdiarys-setup-v3.exe#dl.7z",
+            "hash": "sha256:6dbdc2a3d02ceaa8cefdd2597aa7bf9fe344194b5b70b3dd643ee66b01fa7128"
+        }
+    },
+    "bin": "desktopcal.exe",
+    "shortcuts": [
+        [
+            "desktopcal.exe",
+            "xDiary"
+        ]
+    ],
+    "uninstaller": {
+        "file": "uninst.exe",
+        "args": [
+            "/SILENT"
+        ]
+    },
+    "persist": [
+        "data"
+    ],
+    "checkver": {
+        "url": "https://www.xdiarys.com/download.html",
+        "regex": "xdiarys-setup-v([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.xdiarys.com/windows/xdiarys-setup-v$version.exe#dl.7z"
+            }
+        }
+    }
+}
