@@ -10,6 +10,17 @@
             "hash": "sha256:631407db2956f8829c82f6c525313681211147b08defcbcaa2c9d075f43a62fe"
         }
     },
+    "post_install": [
+        "$cc_root = \"$dir\".Replace('\\', '\\\\')",
+        "'install-context.reg', 'uninstall-context.reg' | ForEach-Object {",
+        "    $content = Get-Content \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\CCompare\\$_\"",
+        "    $content = $content.Replace('$cc_root', $cc_root)",
+        "    if ($global) {",
+        "       $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    Set-Content \"$dir\\$_\" $content -Encoding Ascii",
+        "}"
+    ],
     "bin": "CCompare.exe",
     "shortcuts": [
         [
