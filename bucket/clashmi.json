@@ -22,11 +22,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/KaringX/clashmi/releases/download/v$version/clashmi_$version_windows_x64.zip"
+                "url": "https://github.com/KaringX/clashmi/releases/download/v$version/clashmi_$version_windows_x64.zip",
+                "hash": {
+                "url": "https://github.com/KaringX/clashmi/releases/tag/v$version"
+                }
             }
-        },
-        "hash": {
-            "url": "https://github.com/KaringX/clashmi/releases/tag/v$version"
         }
     }
 }

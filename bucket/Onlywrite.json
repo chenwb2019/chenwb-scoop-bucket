@@ -1,6 +1,6 @@
 {
     "version": "1.2.3",
-    "description": "Onlywrite - A minimal writing application",
+    "description": "A minimal writing application",
     "homepage": "https://gitee.com/knowshub/only-write",
     "license": "MIT",
     "architecture": {
@@ -23,7 +23,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-$version/Windows-$version.rar"
+                "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-$version/Windows-$version.rar",
+                "hash": {
+                    "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-$version/Windows-$version.rar",
+                    "regex": "sha256:([a-f0-9]{64})"
+                }
             }
         }
     }

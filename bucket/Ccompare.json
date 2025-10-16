@@ -3,7 +3,7 @@
     "description": "A code synchronization and comparison tool that can be used for free.",
     "homepage": "https://gitee.com/cxasm/cc-compare",
     "license": "LGPL-3.0",
-    "notes": "",
+    "notes": "run 'reg import install-context.reg' to add context menu for files, 'reg import uninstall-context.reg' to remove it",
     "architecture": {
         "64bit": {
             "url": "https://gitee.com/cxasm/cc-compare/releases/download/ccompare-v1.24/CCompare-v1.24-x64-Installer.exe#/dl.7z",
@@ -35,7 +35,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gitee.com/cxasm/cc-compare/releases/download/ccompare-v$version/CCompare-v$version-x64-Installer.exe#/dl.7z"
+                "url": "https://gitee.com/cxasm/cc-compare/releases/download/ccompare-v$version/CCompare-v$version-x64-Installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://gitee.com/cxasm/cc-compare/releases",
+                    "regex": "CCompare-v$version-x64-Installer.exe.*?sha256:([a-f0-9]{64})"
+                }
             }
         }
     }

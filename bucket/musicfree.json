@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/maotoumao/MusicFreeDesktop/releases/download/v0.0.7/MusicFree-0.0.7-win32-x64-portable.zip",
-            "hash": "SHA256:14d6520628f544339c773d7c915a2a8c809ceaf54a31fa5d4682ece78d9a3137"
+            "hash": "14d6520628f544339c773d7c915a2a8c809ceaf54a31fa5d4682ece78d9a3137"
         }
     },
     "installer": {
@@ -32,7 +32,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/maotoumao/MusicFreeDesktop/releases/latest/download/MusicFree-win-x64.zip"
+                "url": "https://github.com/maotoumao/MusicFreeDesktop/releases/latest/download/MusicFree-$version-win32-x64-portable.zip"
             }
         }
     }

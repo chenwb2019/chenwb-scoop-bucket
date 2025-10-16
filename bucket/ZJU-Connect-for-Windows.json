@@ -1,0 +1,25 @@
+{
+    "version": "1.1.3",
+    "description": "ZJU Connect for Windows is a client for ZJU Connect, a VPN service provided by Zhejiang University.",
+    "homepage": "https://github.com/Mythologyli/ZJU-Connect-for-Windows",
+    "license": "LGPL-3.0-only",
+    "url": "https://github.com/Mythologyli/ZJU-Connect-for-Windows/releases/download/v1.1.3/ZJU-Connect-for-Windows.zip",
+    "hash": "139591D54B4F125E30E5907A56616815E33D47F060A7D5B391E330F180ADAC05",
+    "installer": {
+        "script": [
+            "$subdir = Join-Path -Path \"$dir\" -ChildPath \"ZJU Connect for Windows\"",
+            "if (Test-Path \"$subdir\") { Move-Item -Path \"$subdir\\*\" -Destination \"$dir\" -Force; Remove-Item -Path \"$subdir\" -Recurse -Force }"
+        ]
+    },
+    "bin": "ZJUConnectForWindows.exe",
+    "shortcuts": [
+        [
+            "ZJUConnectForWindows.exe",
+            "ZJU Connect"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Mythologyli/ZJU-Connect-for-Windows/releases/latest/download/ZJU-Connect-for-Windows.zip"
+    }
+}

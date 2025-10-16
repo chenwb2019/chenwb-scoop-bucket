@@ -1,0 +1,24 @@
+{
+    "version":"1.8",
+    "description":"A tool to manage and organize your desktop icons.",
+    "homepage":"https://github.com/Twometer/NoFences",
+    "license":"MIT",
+    "url":"https://github.com/Twometer/NoFences/releases/download/v1.8/NoFences.exe",
+    "hash":"c68515e759f13a6af53c6c83cf14894e5dad1f22ab5b3c3a4d81ad7425105e0f",
+    "bin":"NoFences.exe",
+    "shortcuts":[
+        [
+            "NoFences.exe",
+            "NoFences",
+            "",
+            "NoFences.exe"
+        ]
+    ],
+    "checkver":{
+        "github":"https://github.com/Twometer/NoFences/releases",
+        "regex":"/tag\\/v([\\d.]+)\"/"
+    },
+    "autoupdate":{
+        "url":"https://github.com/Twometer/NoFences/releases/download/v$version/NoFences.exe#dl.7z"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "version": "1.5.6-beta.1",
+    "description": "QTTabBar is a tabbed file explorer add-on for Windows.",
+    "homepage": "https://github.com/indiff/qttabbar",
+    "license":"GPL-3.0-only",
+    "url": "https://github.com/indiff/qttabbar/releases/download/v1.5.6.-beta.1/QTTabBar.Setup.Plugins._v1.5.6-beta.1_en.2024.msi",
+    "hash":"aae4f2bec2f4ca0ede488638b9f31543b7cfcbfc90f1c6ddb74f5fb47b890287",
+    "checkver": {
+        "github": "https://github.com/indiff/qttabbar/releases/latest",
+        "regex": "QTTabBar.Setup.Plugins.v([\\d.]+)_en.2024.msi"
+    },
+    "autoupdate": {
+        "url": "https://github.com/indiff/qttabbar/releases/latest/download/QTTabBar.Setup.Plugins._v$version_en.2024.msi"
+    }
+}
