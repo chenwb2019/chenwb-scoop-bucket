@@ -24,7 +24,7 @@ try {
 }
 
 # 设置临时文件路径
-$tempDir = $env:TEMP
+$tempDir = [System.IO.Path]::GetTempPath()
 $localPath = Join-Path -Path $tempDir -ChildPath $fileName
 
 Write-Host "正在下载文件: $fileName" -ForegroundColor Yellow
@@ -71,4 +71,4 @@ if (Test-Path $localPath) {
 }
 
 Write-Host "`n操作完成" -ForegroundColor Green
-Pause # 等待用户按键后再关闭窗口
+Read-Host -Prompt "按回车键退出"

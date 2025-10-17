@@ -53,7 +53,7 @@ scoop checkup
 
 ```bash
 ###火狐浏览器
-scoop install  firefox 
+scoop install firefox
 ###Listary,everything
 scoop install listary everything
 ###GNU工具，可以考虑全局安装
@@ -130,8 +130,6 @@ scoop cleanup <app> #清除软件旧版本
    | `persist`      | 卸载或更新应用后需要保留的数据，通常是安装目录下的数据文件夹 | 否       |
    | `checkver`     | 版本检查，通过正则表达式检查版本更新                         | 否       |
    | `autoupdate`   | 配置自动更新，如果有不同的`architecture`属性需要配置相应的架构版本 | 否       |
-
-   
 
    > [!NOTE]
    >
@@ -216,7 +214,6 @@ scoop cleanup <app> #清除软件旧版本
            }
        }
    }
-   
    ```
 
    `github`上的`musicfree`项目
@@ -303,7 +300,6 @@ scoop cleanup <app> #清除软件旧版本
            }
        }
    }
-   
    ```
 
    > 1.  https://www.thisfaner.com/p/scoop/
