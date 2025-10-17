@@ -54,14 +54,14 @@ scoop checkup
 ```bash
 ###火狐浏览器
 scoop install  firefox 
-###Listary
-scoop install listary
+###Listary,everything
+scoop install listary everything
 ###GNU工具，可以考虑全局安装
 scoop install gcc make cmake python  openssh miktex  pandoc sass
 ###微软官方环境，可以考虑全局安装
-scoop install vcredist
+scoop install vcredist windowsdesktop-runtime-lts
 ###实用工具
-scoop install office-tool-plus typora vscode sourcegit zeal zotero dism++ sumatrapdf snipaste pdftk honeyview ImageMagick ghostscript powertoys foxmail syncthing
+scoop install office-tool-plus typora vscode sourcegit zeal zotero dism++ sumatrapdf snipaste pdftk honeyview ImageMagick GraphicsMagick ghostscript powertoys foxmail syncthing
 ###娱乐工具
 scoop install wechat qbittorrent-enhanced  aliyun aimp potplayer translucenttb
 ```

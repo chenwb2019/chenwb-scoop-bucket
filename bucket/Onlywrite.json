@@ -9,10 +9,16 @@
             "hash": "sha256:2c84ab9c1d14331c9c13fb0474300e603140dcf135cc69053162be84f5cf34b5"
         }
     },
-    "bin": "Windows-1.2.3\\onlywriter.exe",
+    "installer": {
+        "script":[
+            "$subdir = Join-Path -Path \"$dir\" -ChildPath \"Windows-1.2.3\"",
+            "if (Test-Path \"$subdir\") { Move-Item -Path \"$subdir\\*\" -Destination \"$dir\" -Force; Remove-Item -Path \"$subdir\" -Recurse -Force }"
+        ]
+    },
+    "bin": "onlywriter.exe",
     "shortcuts": [
         [
-            "Windows-1.2.3\\onlywriter.exe",
+            "onlywriter.exe",
             "onlywrite"
         ]
     ],

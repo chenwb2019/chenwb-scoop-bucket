@@ -7,7 +7,6 @@
     "hash":"b50edd16fc4ced4599d5bb7e80448d325e8f7adc348ae9bcd790a85ad43f241f",
     "installer": {
         "script": [
-            "Expand-Archive -Path \"$dir\\$fname\" -DestinationPath \"$dir\\PixPin\" -Force",
             "$subdir = Join-Path -Path \"$dir\" -ChildPath \"PixPin\"",
             "if (Test-Path \"$subdir\") { Move-Item -Path \"$subdir\\*\" -Destination \"$dir\" -Force; Remove-Item -Path \"$subdir\" -Recurse -Force }"
         ]

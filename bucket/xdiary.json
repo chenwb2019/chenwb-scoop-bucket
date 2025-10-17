@@ -9,6 +9,10 @@
             "hash": "sha256:8ebe0676571e22a745d046b261bb3c3353f9f9d760ae93549fe2f804310cb064"
         }
     },
+    "extract_dir": "xdiarys-green",
+    "post_install": [
+        "if (!(Test-Path \"$dir\\data\")) { New-Item \"$dir\\data\" -ItemType Directory | Out-Null }"
+    ],
     "bin": "desktopcal.exe",
     "shortcuts": [
         [
@@ -17,7 +21,8 @@
         ]
     ],
     "persist": [
-        "data"
+        "data",
+        "config.ini"
     ],
     "checkver": {
         "url": "https://www.xdiarys.com/download.html",

@@ -11,12 +11,14 @@
     },
     "installer": {
         "script": [
-            "Expand-Archive -Path \"$dir\\$fname\" -DestinationPath \"$dir\" -Force",
             "$inner = Get-ChildItem -Path \"$dir\" -Filter \"*.zip\" | Where-Object { $_.FullName -ne \"$dir\\$fname\" } | Select-Object -First 1",
             "if ($inner) { Expand-Archive -Path $inner.FullName -DestinationPath \"$dir\" -Force }",
             "Remove-Item $inner.FullName -Force"
         ]
     },
+    "persist":[
+        "portable"
+    ],
     "bin": [
         "MusicFree.exe"
     ],
