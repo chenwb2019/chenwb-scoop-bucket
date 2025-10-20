@@ -71,4 +71,4 @@ if (Test-Path $localPath) {
 }
 
 Write-Host "`n操作完成" -ForegroundColor Green
-Read-Host -Prompt "按回车键退出"
+exit 0
