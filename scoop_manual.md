@@ -53,7 +53,7 @@ scoop checkup
 
 ```bash
 ###火狐浏览器
-scoop install firefox
+scoop install  firefox 
 ###Listary,everything
 scoop install listary everything
 ###GNU工具，可以考虑全局安装
@@ -91,6 +91,8 @@ scoop cleanup <app> #清除软件旧版本
 ```
 
 #### 5. 创建并维护自己的软件仓库
+
+
 
 1. 从`scoop`官方提供的模版仓库创建仓库
 
@@ -130,6 +132,8 @@ scoop cleanup <app> #清除软件旧版本
    | `persist`      | 卸载或更新应用后需要保留的数据，通常是安装目录下的数据文件夹 | 否       |
    | `checkver`     | 版本检查，通过正则表达式检查版本更新                         | 否       |
    | `autoupdate`   | 配置自动更新，如果有不同的`architecture`属性需要配置相应的架构版本 | 否       |
+
+   
 
    > [!NOTE]
    >
@@ -214,6 +218,7 @@ scoop cleanup <app> #清除软件旧版本
            }
        }
    }
+   
    ```
 
    `github`上的`musicfree`项目
@@ -301,6 +306,86 @@ scoop cleanup <app> #清除软件旧版本
        }
    }
    ```
+
+4. 将自建bucket导入scoop
+
+   ```bash
+   scoop bucket add chenwb-scoop-bucket https://github.com/chenwb2019/chenwb-scoop-bucket
+   ###或使用ssh连接，此处的ssh密钥不要设置密码
+   scoop bucket add chenwb-scoop-bucket git@github.com:chenwb2019/chenwb-scoop-bucket
+   ###添加本地仓库,理论可行,实操失败 ,可能原因有开了代理,file协议被禁用等
+   scoop bucket add <bucketname> "file:///<absolute path to bucket>"
+   ###从本地的git仓库设置软链接以方便调试
+   ###仓库名最好保持一致,避免安装软件时脚本冲突
+   cd <ScoopInstallPath>\scoop\buckets
+   New-Item -ItemType SymbolicLink -Name "<bucketname>" -Target "<absolute path to bucket>"
+   ```
+
+5. 导出和导入列表
+
+   ```bash
+   scoop export > scoopfile.json -C
+   scoop import <path/url to scoopfile.json>
+   ```
+
+   我的列表
+
+   ```bash
+   scoop export > privatebackup/scoopfile.json.backup
+   scoop import <ScoopInstallPath>\scoop\buckets\chenwb-scoop-bucket\privatebackup\scoopfile.json.backup
+   scoop import git@github.com:chenwb2019/chenwb-scoop-bucket/privatebackup/scoopfile.json.backup
+   ```
+
+   ```bash
+   Installed apps:
+   
+   Name                    Version       Source              Updated             Info
+   ----                    -------       ------              -------             ----
+   aria2                   1.37.0-1      main                2025-09-15 10:42:40
+   bongocat                0.8.1         chenwb-scoop-bucket 2025-10-17 15:09:51
+   clashmi                 1.0.9.135     chenwb-scoop-bucket 2025-10-17 15:09:50
+   cmake                   4.1.2         main                2025-10-16 15:05:27
+   everything              1.4.1.1029    extras              2025-10-16 15:05:59
+   firefox                 144.0         extras              2025-10-16 16:49:52 
+   foxmail                 7.2.25.492    extras              2025-10-16 16:20:38
+   gcc                     13.2.0        main                2025-09-15 11:40:53
+   ghostscript             10.06.0       main                2025-09-15 16:25:05
+   GraphicsMagick          1.3.45        main                2025-10-16 16:02:35
+   honeyview               5.53          extras              2025-09-15 16:47:00
+   ImageMagick             7.1.2-7       main                2025-10-17 15:41:01
+   innounp                 2.65.2        main                2025-09-15 11:00:01
+   listary                 6.3.5.94      extras              2025-09-16 09:40:32
+   make                    4.4.1         main                2025-09-15 13:40:55
+   nofences                1.8           chenwb-scoop-bucket 2025-10-17 15:09:48
+   office-tool-plus        10.27.24.0    extras              2025-10-16 16:21:24
+   onlywrite               1.2.3         chenwb-scoop-bucket 2025-10-17 15:27:10
+   pandoc                  3.8.2         main                2025-10-16 15:49:12
+   pdftk                   2.02          main                2025-09-15 16:27:11
+   pixpin                  2.0.0.3       chenwb-scoop-bucket 2025-10-17 14:46:29
+   powertoys               0.95.0        extras              2025-10-16 15:55:07
+   python                  3.13.7        main                2025-09-15 16:10:09
+   qttabbar                1.5.6-beta.1  chenwb-scoop-bucket 2025-10-17 15:27:11
+   snipaste                2.10.8        extras              2025-09-16 14:54:12
+   sourcegit               2025.36       extras              2025-10-16 15:57:50
+   steampp                 3.0.0-rc.16   chenwb-scoop-bucket 2025-10-17 15:09:42
+   sudo                    0.2020.01.26  main                2025-09-15 10:32:59
+   sumatrapdf              3.5.2         extras              2025-09-15 14:58:32
+   syncthing               2.0.9         main                2025-09-15 14:59:04
+   translucenttb           2025.1        extras              2025-10-16 16:15:05
+   uv                      0.9.3         main                2025-10-16 15:55:21
+   vcredist2022            14.44.35211.0 extras              2025-09-15 14:55:34
+   vscode                  1.105.1       extras              2025-10-16 16:33:03
+   wixtoolset              6.0.2         main                2025-09-15 10:56:46
+   xdiary                  3             chenwb-scoop-bucket 2025-10-17 15:09:37
+   zeal                    0.7.2         extras              2025-09-15 15:00:52
+   zju-connect-for-windows 1.1.3         chenwb-scoop-bucket 2025-10-17 15:09:27
+   zotero                  7.0.24        extras              2025-10-16 16:23:00
+   7zip                    25.01         main                2025-09-19 10:31:12 Global install
+   git                     2.51.0        main                2025-09-18 09:02:45 Global install
+   ```
+
+   
+
 
    > 1.  https://www.thisfaner.com/p/scoop/
    > 2.  https://deepwiki.com/ScoopInstaller/Scoop/4.1-manifest-structure

@@ -1,0 +1,335 @@
+{
+    "apps": [
+        {
+            "Updated": "2025-09-15T10:42:40.8758035+08:00",
+            "Name": "aria2",
+            "Info": "",
+            "Source": "main",
+            "Version": "1.37.0-1"
+        },
+        {
+            "Updated": "2025-10-17T15:09:51.1711411+08:00",
+            "Name": "bongocat",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "0.8.1"
+        },
+        {
+            "Updated": "2025-10-17T15:09:50.3364971+08:00",
+            "Name": "clashmi",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "1.0.9.135"
+        },
+        {
+            "Updated": "2025-10-16T15:05:27.9678823+08:00",
+            "Name": "cmake",
+            "Info": "",
+            "Source": "main",
+            "Version": "4.1.2"
+        },
+        {
+            "Updated": "2025-10-16T15:05:59.1188351+08:00",
+            "Name": "everything",
+            "Info": "",
+            "Source": "extras",
+            "Version": "1.4.1.1029"
+        },
+        {
+            "Updated": "2025-10-16T16:49:52.259027+08:00",
+            "Name": "firefox",
+            "Info": "",
+            "Source": "extras",
+            "Version": "144.0"
+        },
+        {
+            "Updated": "2025-10-16T16:20:38.923885+08:00",
+            "Name": "foxmail",
+            "Info": "",
+            "Source": "extras",
+            "Version": "7.2.25.492"
+        },
+        {
+            "Updated": "2025-09-15T11:40:53.5152724+08:00",
+            "Name": "gcc",
+            "Info": "",
+            "Source": "main",
+            "Version": "13.2.0"
+        },
+        {
+            "Updated": "2025-09-15T16:25:05.4466078+08:00",
+            "Name": "ghostscript",
+            "Info": "",
+            "Source": "main",
+            "Version": "10.06.0"
+        },
+        {
+            "Updated": "2025-10-16T16:02:35.2929246+08:00",
+            "Name": "GraphicsMagick",
+            "Info": "",
+            "Source": "main",
+            "Version": "1.3.45"
+        },
+        {
+            "Updated": "2025-09-15T16:47:00.4068449+08:00",
+            "Name": "honeyview",
+            "Info": "",
+            "Source": "extras",
+            "Version": "5.53"
+        },
+        {
+            "Updated": "2025-10-17T15:41:01.6364112+08:00",
+            "Name": "ImageMagick",
+            "Info": "",
+            "Source": "main",
+            "Version": "7.1.2-7"
+        },
+        {
+            "Updated": "2025-09-15T11:00:01.2432748+08:00",
+            "Name": "innounp",
+            "Info": "",
+            "Source": "main",
+            "Version": "2.65.2"
+        },
+        {
+            "Updated": "2025-09-16T09:40:32.0415965+08:00",
+            "Name": "listary",
+            "Info": "",
+            "Source": "extras",
+            "Version": "6.3.5.94"
+        },
+        {
+            "Updated": "2025-09-15T13:40:55.4324116+08:00",
+            "Name": "make",
+            "Info": "",
+            "Source": "main",
+            "Version": "4.4.1"
+        },
+        {
+            "Updated": "2025-10-17T15:09:48.0153112+08:00",
+            "Name": "nofences",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "1.8"
+        },
+        {
+            "Updated": "2025-10-16T16:21:24.3845014+08:00",
+            "Name": "office-tool-plus",
+            "Info": "",
+            "Source": "extras",
+            "Version": "10.27.24.0"
+        },
+        {
+            "Updated": "2025-10-17T15:27:10.5001189+08:00",
+            "Name": "onlywrite",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "1.2.3"
+        },
+        {
+            "Updated": "2025-10-16T15:49:12.4185359+08:00",
+            "Name": "pandoc",
+            "Info": "",
+            "Source": "main",
+            "Version": "3.8.2"
+        },
+        {
+            "Updated": "2025-09-15T16:27:11.1799831+08:00",
+            "Name": "pdftk",
+            "Info": "",
+            "Source": "main",
+            "Version": "2.02"
+        },
+        {
+            "Updated": "2025-10-17T14:46:29.2477733+08:00",
+            "Name": "pixpin",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "2.0.0.3"
+        },
+        {
+            "Updated": "2025-10-16T15:55:07.6030919+08:00",
+            "Name": "powertoys",
+            "Info": "",
+            "Source": "extras",
+            "Version": "0.95.0"
+        },
+        {
+            "Updated": "2025-09-15T16:10:09.287701+08:00",
+            "Name": "python",
+            "Info": "",
+            "Source": "main",
+            "Version": "3.13.7"
+        },
+        {
+            "Updated": "2025-10-17T15:27:11.5122989+08:00",
+            "Name": "qttabbar",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "1.5.6-beta.1"
+        },
+        {
+            "Updated": "2025-09-16T14:54:12.0224821+08:00",
+            "Name": "snipaste",
+            "Info": "",
+            "Source": "extras",
+            "Version": "2.10.8"
+        },
+        {
+            "Updated": "2025-10-16T15:57:50.6986126+08:00",
+            "Name": "sourcegit",
+            "Info": "",
+            "Source": "extras",
+            "Version": "2025.36"
+        },
+        {
+            "Updated": "2025-10-17T15:09:42.9119256+08:00",
+            "Name": "steampp",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "3.0.0-rc.16"
+        },
+        {
+            "Updated": "2025-09-15T10:32:59.7425807+08:00",
+            "Name": "sudo",
+            "Info": "",
+            "Source": "main",
+            "Version": "0.2020.01.26"
+        },
+        {
+            "Updated": "2025-09-15T14:58:32.6178175+08:00",
+            "Name": "sumatrapdf",
+            "Info": "",
+            "Source": "extras",
+            "Version": "3.5.2"
+        },
+        {
+            "Updated": "2025-09-15T14:59:04.0059856+08:00",
+            "Name": "syncthing",
+            "Info": "",
+            "Source": "main",
+            "Version": "2.0.9"
+        },
+        {
+            "Updated": "2025-10-16T16:15:05.0422164+08:00",
+            "Name": "translucenttb",
+            "Info": "",
+            "Source": "extras",
+            "Version": "2025.1"
+        },
+        {
+            "Updated": "2025-10-16T15:55:21.0210233+08:00",
+            "Name": "uv",
+            "Info": "",
+            "Source": "main",
+            "Version": "0.9.3"
+        },
+        {
+            "Updated": "2025-09-15T14:55:34.6791317+08:00",
+            "Name": "vcredist2022",
+            "Info": "",
+            "Source": "extras",
+            "Version": "14.44.35211.0"
+        },
+        {
+            "Updated": "2025-10-16T16:33:03.5982124+08:00",
+            "Name": "vscode",
+            "Info": "",
+            "Source": "extras",
+            "Version": "1.105.1"
+        },
+        {
+            "Updated": "2025-09-15T10:56:46.2879229+08:00",
+            "Name": "wixtoolset",
+            "Info": "",
+            "Source": "main",
+            "Version": "6.0.2"
+        },
+        {
+            "Updated": "2025-10-17T15:09:37.0492598+08:00",
+            "Name": "xdiary",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "3"
+        },
+        {
+            "Updated": "2025-09-15T15:00:52.3640897+08:00",
+            "Name": "zeal",
+            "Info": "",
+            "Source": "extras",
+            "Version": "0.7.2"
+        },
+        {
+            "Updated": "2025-10-17T15:09:27.840464+08:00",
+            "Name": "zju-connect-for-windows",
+            "Info": "",
+            "Source": "chenwb-scoop-bucket",
+            "Version": "1.1.3"
+        },
+        {
+            "Updated": "2025-10-16T16:23:00.3489867+08:00",
+            "Name": "zotero",
+            "Info": "",
+            "Source": "extras",
+            "Version": "7.0.24"
+        },
+        {
+            "Updated": "2025-09-19T10:31:12.6109288+08:00",
+            "Name": "7zip",
+            "Info": "Global install",
+            "Source": "main",
+            "Version": "25.01"
+        },
+        {
+            "Updated": "2025-09-18T09:02:45.7630204+08:00",
+            "Name": "git",
+            "Info": "Global install",
+            "Source": "main",
+            "Version": "2.51.0"
+        }
+    ],
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://gitee.com/scoop-installer/Main",
+            "Updated": "2025-10-20T04:27:58+08:00",
+            "Manifests": 1406
+        },
+        {
+            "Name": "extras",
+            "Source": "https://mirrors.nju.edu.cn/git/scoop-extras.git/",
+            "Updated": "2025-10-19T08:43:12+08:00",
+            "Manifests": 2201
+        },
+        {
+            "Name": "versions",
+            "Source": "https://mirrors.nju.edu.cn/git/scoop-versions.git/",
+            "Updated": "2025-10-19T20:55:30+08:00",
+            "Manifests": 528
+        },
+        {
+            "Name": "nonportable",
+            "Source": "https://gitee.com/scoop-installer/Nonportable",
+            "Updated": "2025-10-18T00:42:44+08:00",
+            "Manifests": 128
+        },
+        {
+            "Name": "java",
+            "Source": "https://mirrors.nju.edu.cn/git/scoop-java.git/",
+            "Updated": "2025-10-16T05:09:55+08:00",
+            "Manifests": 322
+        },
+        {
+            "Name": "chenwb-scoop-bucket",
+            "Source": "git@github-scoop:chenwb2019/chenwb-scoop-bucket.git",
+            "Updated": "2025-10-17T20:59:16+08:00",
+            "Manifests": 14
+        }
+    ],
+    "config": {
+        "scoop_repo": "https://gitee.com/scoop-installer/scoop",
+        "scoop_branch": "master",
+        "aria2-enabled": false,
+        "aria2-warning-enabled": false
+    }
+}
