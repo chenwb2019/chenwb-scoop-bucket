@@ -3,7 +3,7 @@
 .SYNOPSIS
   计算给定 URL 指向文件的 SHA256 哈希并输出结果。
 .PARAMETER Url
-  可选。要下载的文件 URL。CI 环境请通过参数传入（避免交互）。
+  可选。要下载的文件 URL。CI 环境请通过参数或环境变量传入（避免交互）。
 #>
 [CmdletBinding()]
 param(
@@ -17,18 +17,44 @@ function Write-Err  { Write-Host $args -ForegroundColor Red }
 
 Write-Info "=== 文件哈希值计算工具 ==="
 
+# 获取 URL：优先级 参数 > 环境变量 > repo/url.txt > stdin > 交互提示
 if (-not $Url) {
-    try {
-        # 在交互式会话中提示；否则在 CI 中直接失败，避免挂起
-        $Url = Read-Host "请输入文件的完整URL"
-    } catch {
-        Write-Err "未提供 URL，且当前会话不可交互。请通过 -Url 参数调用脚本。"
-        exit 2
+    $envCandidates = @($env:URL, $env:INPUT_URL, $env:FILE_URL, $env:DOWNLOAD_URL)
+    foreach ($e in $envCandidates) { if ($e) { $Url = $e; break } }
+
+    if (-not $Url -and $env:GITHUB_WORKSPACE) {
+        $p = Join-Path $env:GITHUB_WORKSPACE 'url.txt'
+        if (Test-Path $p) { $Url = (Get-Content $p -Raw).Trim() }
+    }
+
+    if (-not $Url) {
+        # 仅在 stdin 被重定向时从 stdin 读取，避免在交互式终端阻塞
+        try {
+            if ([Console]::IsInputRedirected) {
+                $stdin = [Console]::In.ReadToEnd().Trim()
+                if ($stdin) { $Url = $stdin }
+            }
+        } catch { }
+    }
+
+    if (-not $Url) {
+        # 只有在交互式会话才提示，否则退出（便于 CI 判断失败）
+        try {
+            if ($Host -and $Host.UI -and $Host.UI.RawUI) {
+                $Url = Read-Host "请输入文件的完整 URL（CI 请通过 env: URL 或参数传入）"
+            } else {
+                Write-Err "未提供 URL，且当前会话不可交互。请通过 -Url 参数或环境变量 URL 调用脚本。"
+                exit 2
+            }
+        } catch {
+            Write-Err "未提供 URL，且当前会话不可交互。请通过 -Url 参数或环境变量 URL 调用脚本。"
+            exit 2
+        }
     }
 }
 
 if (-not [System.Uri]::IsWellFormedUriString($Url, [System.UriKind]::Absolute)) {
-    Write-Err "错误: 提供的 URL 格式不正确"
+    Write-Err "错误: 提供的 URL 格式不正确： $Url"
     exit 3
 }
 
@@ -67,14 +93,8 @@ try {
     Write-Host "URL: $Url" -ForegroundColor White
     Write-Host "SHA256: $hash" -ForegroundColor Cyan
 
-    # 若运行环境支持 Set-Clipboard 则复制，否则仅输出
     if (Get-Command -Name Set-Clipboard -ErrorAction SilentlyContinue) {
-        try {
-            Set-Clipboard -Value $hash
-            Write-Info "哈希值已复制到剪贴板"
-        } catch {
-            Write-Warn "无法复制到剪贴板：$($_.Exception.Message)"
-        }
+        try { Set-Clipboard -Value $hash } catch { Write-Warn "无法复制到剪贴板：$($_.Exception.Message)" }
     } else {
         Write-Warn "当前环境不支持 Set-Clipboard，哈希已在输出中显示。"
     }
@@ -84,8 +104,6 @@ try {
     exit 7
 }
 
-# 清理临时文件（遇错不终止）
 try { Remove-Item $localPath -Force -ErrorAction SilentlyContinue } catch {}
-
 Write-Info "`n操作完成"
 exit 0

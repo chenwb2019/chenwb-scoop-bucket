@@ -28,6 +28,8 @@ jobs:
         with:
           modules-to-cache: BuildHelpers
           shell: powershell
+        env:
+          URL: https://github.com/Twometer/NoFences/releases/download/v1.8/NoFences.exe
       - name: Test Bucket
         shell: powershell
         run: |
@@ -52,6 +54,8 @@ jobs:
         with:
           modules-to-cache: BuildHelpers
           shell: pwsh
+        env:
+          URL: https://github.com/Twometer/NoFences/releases/download/v1.8/NoFences.exe
       - name: Test Bucket
         shell: pwsh
         run: |
