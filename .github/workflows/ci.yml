@@ -36,8 +36,6 @@ jobs:
         run: |
           $env:SCOOP_HOME="$(Convert-Path '..\scoop_core')"
           .\bin\test.ps1
-          scoop bucket add my_bucket "$(Convert-Path '.')"
-          scoop bucket list
   test_pwsh:
     name: PowerShell
     runs-on: windows-latest
