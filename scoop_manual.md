@@ -53,7 +53,7 @@ scoop checkup
 
 ```bash
 ###火狐浏览器
-scoop install  firefox 
+scoop install firefox
 ###Listary,everything
 scoop install listary everything
 ###GNU工具，可以考虑全局安装
@@ -132,8 +132,6 @@ scoop cleanup <app> #清除软件旧版本
    | `persist`      | 卸载或更新应用后需要保留的数据，通常是安装目录下的数据文件夹 | 否       |
    | `checkver`     | 版本检查，通过正则表达式检查版本更新                         | 否       |
    | `autoupdate`   | 配置自动更新，如果有不同的`architecture`属性需要配置相应的架构版本 | 否       |
-
-   
 
    > [!NOTE]
    >
@@ -218,7 +216,6 @@ scoop cleanup <app> #清除软件旧版本
            }
        }
    }
-   
    ```
 
    `github`上的`musicfree`项目
@@ -338,7 +335,6 @@ scoop cleanup <app> #清除软件旧版本
 
    ```bash
    Installed apps:
-   
    Name                    Version       Source              Updated             Info
    ----                    -------       ------              -------             ----
    aria2                   1.37.0-1      main                2025-09-15 10:42:40
@@ -346,7 +342,7 @@ scoop cleanup <app> #清除软件旧版本
    clashmi                 1.0.9.135     chenwb-scoop-bucket 2025-10-17 15:09:50
    cmake                   4.1.2         main                2025-10-16 15:05:27
    everything              1.4.1.1029    extras              2025-10-16 15:05:59
-   firefox                 144.0         extras              2025-10-16 16:49:52 
+   firefox                 144.0         extras              2025-10-16 16:49:52
    foxmail                 7.2.25.492    extras              2025-10-16 16:20:38
    gcc                     13.2.0        main                2025-09-15 11:40:53
    ghostscript             10.06.0       main                2025-09-15 16:25:05
@@ -383,8 +379,6 @@ scoop cleanup <app> #清除软件旧版本
    7zip                    25.01         main                2025-09-19 10:31:12 Global install
    git                     2.51.0        main                2025-09-18 09:02:45 Global install
    ```
-
-   
 
 
    > 1.  https://www.thisfaner.com/p/scoop/
