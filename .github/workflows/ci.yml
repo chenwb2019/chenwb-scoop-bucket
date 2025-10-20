@@ -34,7 +34,7 @@ jobs:
         working-directory: my_bucket
         shell: powershell
         run: |
-          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          $env:SCOOP_HOME="$(Convert-Path '..\scoop_core')"
           .\bin\test.ps1
   test_pwsh:
     name: PowerShell
@@ -61,5 +61,5 @@ jobs:
         working-directory: my_bucket
         shell: pwsh
         run: |
-          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          $env:SCOOP_HOME="$(Convert-Path '..\scoop_core')"
           .\bin\test.ps1
