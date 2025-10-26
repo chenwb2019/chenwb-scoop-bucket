@@ -1,12 +1,12 @@
 {
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "A free, cross-platform music player",
     "homepage": "https://musicfree.catcat.work/",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/maotoumao/MusicFreeDesktop/releases/download/v0.0.7/MusicFree-0.0.7-win32-x64-portable.zip",
-            "hash": "14d6520628f544339c773d7c915a2a8c809ceaf54a31fa5d4682ece78d9a3137"
+            "url": "https://github.com/maotoumao/MusicFreeDesktop/releases/latest/download/MusicFree-0.0.8-win32-x64-portable.zip",
+            "hash": "b84ef7feced17a95dd704db9968867726008d782619d511656e5ece059951399"
         }
     },
     "installer": {
@@ -16,12 +16,8 @@
             "Remove-Item $inner.FullName -Force"
         ]
     },
-    "persist":[
-        "portable"
-    ],
-    "bin": [
-        "MusicFree.exe"
-    ],
+    "persist": "portable",
+    "bin": "MusicFree.exe",
     "shortcuts": [
         [
             "MusicFree.exe",
