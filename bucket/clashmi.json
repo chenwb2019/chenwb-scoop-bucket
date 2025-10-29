@@ -1,7 +1,7 @@
 {
     "version": "1.0.11.150",
     "description": "ClashMI - A tool for managing network proxy settings.",
-    "homepage": "https://clashmi.uk/",
+    "homepage": "https://clashmi.app/",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
