@@ -9,8 +9,8 @@
 | Network Agency | steampp, clashmi, zju-connect-for-windows |
 | Work Tools     | notepad--, ccompare, qttabbar, pixpin     |
 | Beautify       | nofences, bongocat, xdiary                |
-| Entertainment  | onlywrite                                 |
-| Music Player   | lxmusic, musicfree                        |
+| Entertainment  | onlywrite, steam, Alas                    |
+| Music Player   | ~~lxmusic~~, musicfree                    |
 
 ### Original Readme
 
