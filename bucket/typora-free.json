@@ -1,0 +1,35 @@
+{
+    "version": "0.11.18",
+    "description": "A minimal markdown editor, providing seamless experience for both markdown readers and writers.",
+    "homepage": "https://typora.io/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wyf9661/typora-free/releases/download/v0.11.18/typora-setup-x64-0.11.18.exe",
+            "hash": "skip"
+        }
+    },
+    "innosetup": true,
+    "post_install": [
+        "$configpath = Join-Path $env:AppData 'Typora'",
+        "$personalpath = $persist_dir",
+        "if (!(Test-Path $personalpath)) { New-Item -ItemType Directory -Path $personalpath -force | Out-Null }",
+        "if (Test-Path $configpath) { ",
+        "$testlink = (Get-Item $configpath).LinkType",
+        "if ($testlink -ne 'Junction') {",
+        "Get-ChildItem -Path $configpath | Move-Item -Destination $personalpath -Force",
+        "Remove-Item $configpath -force",
+        "New-Item -ItemType Junction -Path $configpath -Target $personalpath -Force | Out-Null",
+        "}",
+        "} else {",
+        "New-Item -ItemType Junction -Path $configpath -Target $personalpath -Force | Out-Null",
+        "}"
+    ],
+    "bin": "Typora.exe",
+    "shortcuts": [
+        [
+            "Typora.exe",
+            "Typora"
+        ]
+    ]
+}
