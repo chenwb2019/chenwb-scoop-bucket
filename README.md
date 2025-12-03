@@ -10,7 +10,7 @@
 | Work Tools     | notepad--, ccompare, qttabbar, pixpin     |
 | Beautify       | nofences, bongocat, xdiary                |
 | Entertainment  | onlywrite, steam, Alas                    |
-| Music Player   | ~~lxmusic~~, musicfree                    |
+| Music Player   | lxmusic, musicfree                    |
 | Editor         | typora-cn    |
 
 ### Original Readme
