@@ -37,7 +37,12 @@
         "New-Item -ItemType Junction -Path $configpath -Target $personalpath -Force | Out-Null",
         "}"
     ],
-    "bin": [["Typora.exe", "Typora-nightly"]],
+    "bin": [
+        [
+            "Typora.exe",
+            "Typora-nightly"
+        ]
+    ],
     "shortcuts": [
         [
             "Typora.exe",

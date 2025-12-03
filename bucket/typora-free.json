@@ -27,7 +27,10 @@
         "}"
     ],
     "bin": [
-        ["Typora.exe", "Typora-0.11.18"]
+        [
+            "Typora.exe",
+            "Typora-0.11.18"
+        ]
     ],
     "shortcuts": [
         [

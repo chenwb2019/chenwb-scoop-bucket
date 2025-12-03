@@ -41,7 +41,12 @@
         "New-Item -ItemType Junction -Path $configpath -Target $personalpath -Force | Out-Null",
         "}"
     ],
-    "bin": [["Typora.exe", "Typora-scoop"]],
+    "bin": [
+        [
+            "Typora.exe",
+            "Typora-scoop"
+        ]
+    ],
     "shortcuts": [
         [
             "Typora.exe",
