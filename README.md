@@ -11,6 +11,7 @@
 | Beautify       | nofences, bongocat, xdiary                |
 | Entertainment  | onlywrite, steam, Alas                    |
 | Music Player   | ~~lxmusic~~, musicfree                    |
+| Editor         | typora-cn    |
 
 ### Original Readme
 
@@ -31,4 +32,3 @@
 7. Commit and push changes.
 8. If you'd like your bucket to be indexed on `https://scoop.sh`, add the
    topic `scoop-bucket` to your repository.
-
