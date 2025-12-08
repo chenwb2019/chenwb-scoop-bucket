@@ -1,29 +1,43 @@
 {
-    "version": "3.3.0-fix.4",
+    "version": "3.3.0-fix.1",
     "description": "A lightweight music player that supports various audio formats and provides a user-friendly interface.",
     "homepage": "https://github.com/yourusername/lxmusic",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.4/ikun-music-desktop-v3.3.0-fix.4-win_x64-green.7z",
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.1/ikun-music-desktop-v3.3.0-fix.1-win_x64-green.7z",
             "hash": "sha256:5909a0af64207eeeb95e17f116c19a4ddc25b55543e8f0553545929970a2c5ac"
         },
         "32bit": {
-            "url":"https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.4/ikun-music-desktop-v3.3.0-fix.4-win7_x86-green.7z",
+            "url":"https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.1/ikun-music-desktop-v3.3.0-fix.1-win7_x86-green.7z",
             "hash":"sha256:e3b1b7a7977a06e1e9a80312bcfbd66e417007d135e0d2c842e12d28c84d44e4"
         },
         "arm64": {
-            "url":"https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.4/ikun-music-desktop-v3.3.0-fix.4-win_arm64-green.7z",
+            "url":"https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.1/ikun-music-desktop-v3.3.0-fix.1-win_arm64-green.7z",
             "hash":"sha256:35043fec2f304a77117f6e7f38123a7156f486b3c8e613d6f6b4b6020fbf8007"
         }
     },
     "post_install":[
-        "if (!(Test-Path \"$dir\\backup\")) { New-Item -Path \"$dir\\backup\" -ItemType Directory | Out-Null }"
+        "$datapath = Join-Path $env:AppData 'ikun-music-desktop'",
+        "$persistpath = Join-Path $persist_dir 'userdata'",
+        "if (!(Test-Path $persistpath)) { New-Item -Path $persistpath -ItemType Directory | Out-Null }",
+        "if (Test-Path $datapath) { ",
+        "    $testlink = (Get-Item $datapath).LinkType",
+        "    if ($testlink -ne 'Junction') {",
+        "        Get-ChildItem -Path $datapath | Move-Item -Destination $persistpath -Force",
+        "        Remove-Item $datapath -force",
+        "        New-Item -ItemType Junction -Path $datapath -Target $persistpath -Force | Out-Null",
+        "    }",
+        "} else {",
+        "    New-Item -ItemType Junction -Path $datapath -Target $persistpath -Force | Out-Null",
+        "}"
     ],
-    "persist": [
-        "backup"
+    "bin": [
+        [
+            "ikun-music-desktop.exe",
+            "LX Music"
+        ]
     ],
-    "bin": "ikun-music-desktop.exe",
     "shortcuts": [
         [
             "ikun-music-desktop.exe",

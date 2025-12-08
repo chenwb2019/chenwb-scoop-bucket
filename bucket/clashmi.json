@@ -11,7 +11,7 @@
     },
     "post_install": [
         "$configpath = Join-Path $env:AppData 'clashmi'",
-        "$personalpath = $persist_dir",
+        "$personalpath = \"$persist_dir\\config\"",
         "if (!(Test-Path $personalpath)) { New-Item -ItemType Directory -Path $personalpath -force | Out-Null }",
         "if (Test-Path $configpath) { ",
         "$testlink = (Get-Item $configpath).LinkType",

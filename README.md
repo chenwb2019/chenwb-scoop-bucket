@@ -7,9 +7,9 @@
 | class          | Applicatons                               |
 | -------------- | ----------------------------------------- |
 | Network Agency | steampp, clashmi, zju-connect-for-windows |
-| Work Tools     | notepad--, ccompare, qttabbar, pixpin     |
+| Work Tools     | notepad--, ccompare, qttabbar, pixpin,dotnet-scoop     |
 | Beautify       | nofences, bongocat, xdiary                |
-| Entertainment  | onlywrite, steam, Alas                    |
+| Entertainment  | onlywrite, steam, Alas,firefox-cn                |
 | Music Player   | lxmusic, musicfree                    |
 | Editor         | typora-cn    |
 

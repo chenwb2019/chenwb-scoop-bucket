@@ -11,6 +11,21 @@
             "if (Test-Path \"$subdir\") { Move-Item -Path \"$subdir\\*\" -Destination \"$dir\" -Force; Remove-Item -Path \"$subdir\" -Recurse -Force }"
         ]
     },
+    "post_install": [
+        "$logpath = Join-Path $env:AppData 'QTTabBar'",
+        "$personalpath = \"$persist_dir\\log\"",
+        "if (!(Test-Path $personalpath)) { New-Item -ItemType Directory -Path $personalpath -force | Out-Null }",
+        "if (Test-Path $logpath) { ",
+        "$testlink = (Get-Item $logpath).LinkType",
+        "if ($testlink -ne 'Junction') {",
+        "Get-ChildItem -Path $logpath | Move-Item -Destination $personalpath -Force",
+        "Remove-Item $logpath -force",
+        "New-Item -ItemType Junction -Path $logpath -Target $personalpath -Force | Out-Null",
+        "}",
+        "} else {",
+        "New-Item -ItemType Junction -Path $logpath -Target $personalpath -Force | Out-Null",
+        "}"
+    ],
     "checkver": {
         "github": "https://github.com/indiff/qttabbar/releases/latest",
         "regex": "QTTabBar.Setup.Plugins.v([\\d.]+)_en.2024.msi"

@@ -24,9 +24,6 @@
             "BongoCat"
         ]
     ],
-    "uninstaller": {
-        "file": "uninstall.exe"
-    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
