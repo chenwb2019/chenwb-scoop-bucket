@@ -1,7 +1,7 @@
 {
     "version": "3.3.0-fix.1",
     "description": "A lightweight music player that supports various audio formats and provides a user-friendly interface.",
-    "homepage": "https://github.com/yourusername/lxmusic",
+    "homepage": "https://github.com/ikunshare/lxmusic",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
@@ -44,10 +44,7 @@
             "LX Music"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/ikunshare/ikun-music-desktop/releases/tag",
-        "regex": "[\\d]+\\.[\\d]+\\.[\\d]+(?:-fix\\.[\\d]+)?"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
