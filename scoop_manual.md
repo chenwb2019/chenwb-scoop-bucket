@@ -92,8 +92,6 @@ scoop cleanup <app> #清除软件旧版本
 
 #### 5. 创建并维护自己的软件仓库
 
-
-
 1. 从`scoop`官方提供的模版仓库创建仓库
 
    ```bash
@@ -136,8 +134,6 @@ scoop cleanup <app> #清除软件旧版本
    > [!NOTE]
    >
    > 一些第三方`bucket`的哈希校验经常出错，在自己编写`manifest`时，如果信任下载来源，可将`hash`属性设置为`skip`来跳过哈希校验。
-
-   > [!NOTE]
    >
    > 特别的，可以通过`scoop create <url>`快速创建一个只含`url`和`version`的`manifest`
 
@@ -380,10 +376,9 @@ scoop cleanup <app> #清除软件旧版本
    git                     2.51.0        main                2025-09-18 09:02:45 Global install
    ```
 
-
-   > 1.  https://www.thisfaner.com/p/scoop/
-   > 2.  https://deepwiki.com/ScoopInstaller/Scoop/4.1-manifest-structure
-   > 3.  https://blog.csdn.net/it_rs/article/details/120479996
-   > 4.  https://blog.csdn.net/gitblog_00897/article/details/152704300
-   > 5.  https://spdx.org/licenses/
-   > 6.  https://chat.deepseek.com/
+   > 1. <https://www.thisfaner.com/p/scoop/>
+   > 2. <https://deepwiki.com/ScoopInstaller/Scoop/4.1-manifest-structure>
+   > 3. <https://blog.csdn.net/it_rs/article/details/120479996>
+   > 4. <https://blog.csdn.net/gitblog_00897/article/details/152704300>
+   > 5. <https://spdx.org/licenses/>
+   > 6. <https://chat.deepseek.com/>
