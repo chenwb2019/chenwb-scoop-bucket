@@ -10,6 +10,11 @@
         "pandoc":"pandoc",
         "see-yue-typora":"see-yue-typora"
     },
+    "notes": [
+        "Download from typoraio.cn mirror site.",
+        "The configuration files and user data are stored in persistent directory.",
+        "run 'scoop config update_nightly false' to disable automatic updates for nightly versions."
+    ],
     "architecture": {
         "64bit": {
             "url":"https://downloads.typoraio.cn/windows/typora-setup-x64.exe",
@@ -22,20 +27,9 @@
     },
     "innosetup": true,
     "post_install": [
+        ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "$configpath = Join-Path $env:AppData 'Typora'",
-        "$personalpath = $persist_dir",
-        "if (Test-Path $configpath) {",
-        "$testlink = (Get-Item $configpath).LinkType",
-        "if ($testlink -ne 'Junction') {",
-        "if (!(Test-Path $personalpath)) { New-Item -ItemType Directory -Path $personalpath -force | Out-Null }",
-        "Get-ChildItem -Path $configpath | Move-Item -Destination $personalpath -Force",
-        "Remove-Item $configpath -force",
-        "New-Item -ItemType Junction -Path $configpath -Target $personalpath -Force | Out-Null",
-        "}",
-        "} else {",
-        "if (!(Test-Path $personalpath)) { New-Item -ItemType Directory -Path $personalpath -force | Out-Null }",
-        "New-Item -ItemType Junction -Path $configpath -Target $personalpath -Force | Out-Null",
-        "}"
+        "Move-Data_dir -data_dir $configpath -persist_dir $persist_dir"
     ],
     "bin": [
         [

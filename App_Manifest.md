@@ -1,0 +1,41 @@
+- Plan
+  - BaiduNetDisk
+  - Bili.Copilot
+  - Bongocat
+  - CC98-Desktop
+  - Ccompare
+  - Clashmi
+  - Dingtalk
+  - Dotnet-default
+  - Dotnet-scoop
+  - Doubao
+  - Douyin
+  - DouyinSelection
+  - EasySpider
+  - Firefox-cn
+  - HEU-KMS-Activator
+  - IKUN-Music
+  - Lucky
+  - MUMU-Player
+  - Musicfree
+  - Nofences
+  - Notepad--
+  - Onlywrite
+  - Pixpin
+  - QuarkCloudDrive
+  - QTTabBar
+  - See-Yue-Typora
+  - Steam
+  - Steampp
+  - Typora-nightly
+  - Webdav
+  - Wechat
+  - Xdiary
+  - ZJU-Connect-for-Windows
+- Doing
+- Done
+  - Alas
+  - See-Yue-Typora
+  - Typora-cn
+  - Typora-free
+- Deprecated
