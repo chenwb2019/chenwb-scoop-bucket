@@ -3,7 +3,12 @@
     "description": "Microsoft .NET Framework 10.0.100 Developer Pack",
     "homepage": "https://dotnet.microsoft.com/zh-cn/",
     "license": "MIT",
-    "notes": "This installation will change the default directory of dotnet",
+    "notes": [
+        "Manage dotnet runtimes and SDKs with scoop persisted data directories. And it's better to run 'scoop hold dotnet-scoop' to prevent automatic updates.",
+        "Restart to start using dotnet.",
+        "If you intend to manage dotnet via the default method, run 'scoop uninstall dotnet-scoop -p', and this action will retain sdks and runtimes data in the default location, then you can choose to delete or keep them and reinstall dotnet following the officially recommended approach.",
+        "If you have installed multiple dotnet versions with the same major version number, it's better to manually remove the older ones in persistent directories to eliminate unnecessary storage overhead, as dotnet maintains backward compatibility across builds of the same major version."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.101/dotnet-sdk-10.0.101-win-x64.zip",
@@ -16,40 +21,37 @@
         "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
     },
     "pre_install": [
-        "$reg_install_path = \"HKLM:SOFTWARE\\dotnet\\Setup\\InstalledVersions\\x64\"",
-        "if (!(Test-Path \"$reg_install_path\")) {",
-        "   New-Item -Path \"$reg_install_path\" -Type Directory -Force | Out-Null",
+        "if (!(is_Admin)) {",
+        "   throw 'Administrator privileges are required to install .NET SDK. Please use \"sudo scoop install dotnet-scoop\" to install this package with elevated permissions.'",
         "}",
-        "New-ItemProperty -Path \"$reg_install_path\" -Name \"InstallLocation\" -Value %DOTNET_ROOT% -Force | Out-Null",
+        "Write-Host 'Change the default InstallLocation to scoop Directory' | Out-Null",
+        "$reg_install_path = \"HKLM:SOFTWARE\\dotnet\\Setup\\InstalledVersions\\x64\"",
+        "if (!(Test-Path \"$reg_install_path\\sharedhost\")) {",
+        "   New-Item -Path \"$reg_install_path\\sharedhost\" -Type Directory -Force | Out-Null",
+        "}",
+        "New-ItemProperty -Path \"$reg_install_path\" -Name \"InstallLocation\" -Value $dir -Force | Out-Null",
         "New-ItemProperty -Path \"$reg_install_path\\sharedhost\" -Name \"Version\" -Value $version -Force | Out-Null",
-        "New-ItemProperty -Path \"$reg_install_path\\sharedhost\" -Name \"Path\" -Value %DOTNET_ROOT% -Force | Out-Null"
+        "New-ItemProperty -Path \"$reg_install_path\\sharedhost\" -Name \"Path\" -Value \"$persist_dir\\shared\" -Force | Out-Null"
     ],
     "post_install": [
+        ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "$runtimepath = \"$env:ProgramFiles\\dotnet\\shared\"",
-        "if (Test-Path $runtimepath) {",
-        "    $testlink = (Get-Item $runtimepath).LinkType",
-        "    if ($testlink -ne 'Junction') {",
-        "       Get-ChildItem -Path $runtimepath | Move-Item -Destination \"$persist_dir\\shared\" -Force",
-        "       Remove-Item $runtimepath -force",
-        "       New-Item -ItemType Junction -Path $runtimepath -Target \"$persist_dir\\shared\" -Force | Out-Null",
-        "    }",
-        "} else {",
-        "    New-Item -ItemType Junction -Path $runtimepath -Target \"$persist_dir\\shared\" -Force | Out-Null",
-        "}",
+        "Move-Data_dir \"$runtimepath\" \"$persist_dir\\shared\"",
         "$sdkpath = \"$env:ProgramFiles\\dotnet\\sdk\"",
-        "if (Test-Path $sdkpath) {",
-        "    $testlink = (Get-Item $sdkpath).LinkType",
-        "    if ($testlink -ne 'Junction') {",
-        "       Get-ChildItem -Path $sdkpath | Move-Item -Destination \"$persist_dir\\sdk\" -Force",
-        "       Remove-Item $sdkpath -force",
-        "       New-Item -ItemType Junction -Path $sdkpath -Target \"$persist_dir\\sdk\" -Force | Out-Null",
-        "    }",
-        "} else {",
-        "    New-Item -ItemType Junction -Path $sdkpath -Target \"$persist_dir\\sdk\" -Force | Out-Null",
+        "Move-Data_dir \"$sdkpath\" \"$persist_dir\\sdk\""
+    ],
+    "pre_uninstall": [
+        "if (!(is_admin)) {",
+        "   throw 'Administrator privileges are required to uninstall .NET SDK. Please use \"sudo scoop uninstall dotnet-scoop\" to uninstall this package with elevated permissions.'",
+        "}",
+        "Remove-ItemProperty -Path \"HKLM:\\SOFTWARE\\dotnet\\Setup\\InstalledVersions\\x64\" -Name \"InstallLocation\" -Force | Out-Null",
+        "if ($purge) {",
+        "   Remove-Item -Path \"$env:ProgramFiles\\dotnet\\shared\" -Recurse -Force | Out-Null",
+        "   . \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
+        "   Move-Data_dir \"$persist_dir\\shared\" \"$env:ProgramFiles\\dotnet\\shared\"",
+        "   Set-ItemProperty -Path \"HKLM:\\SOFTWARE\\dotnet\\Setup\\InstalledVersions\\x64\\sharedhost\" -Name \"Path\" -Value $env:ProgramFiles\\dotnet\\shared -Force | Out-Null",
         "}"
     ],
-    "pre_uninstall": "info 'If the uninstall fails with a message saying that access is denied, you may need to log out of your current account, log back in and try again.'",
-    "post_uninstall": "Remove-ItemProperty -Path \"HKLM:SOFTWARE\\dotnet\\Setup\\InstalledVersions\\x64\" -Name \"InstallLocation\" -Force | Out-Null",
     "persist": [
         "sdk",
         "shared"

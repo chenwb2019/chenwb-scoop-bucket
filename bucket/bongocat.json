@@ -3,6 +3,7 @@
     "description": "A cute animated cat that sits on your desktop and reacts to your keyboard.",
     "homepage": "https://github.com/ayangweb/BongoCat",
     "license": "MIT",
+    "notes": "Delete the config files on uninstall by setting 'scoop uninstall --purge bongocat'",
     "architecture": {
         "64bit": {
             "url": "https://github.com/ayangweb/BongoCat/releases/download/v0.8.2/BongoCat_0.8.2_x64-setup.exe#dl.7z",
@@ -18,6 +19,12 @@
         }
     },
     "innosetup": true,
+    "post_uninstall": [
+        "if ($purge) {",
+        "    Remove-Item \"$env:APPDATA\\com.ayangweb.BongoCat\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "    Remove-Item \"$env:LOCALAPPDATA\\com.ayangweb.BongoCat\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
     "bin": "bongo-cat.exe",
     "shortcuts": [
         [

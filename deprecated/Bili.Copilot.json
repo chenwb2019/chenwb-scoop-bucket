@@ -1,0 +1,33 @@
+{
+    "version": "2.2505.2.0",
+    "description": "A Bilibili desktop client refactored basded on Windows App SDK",
+    "homepage": "https://github.com/Richasy/Bili.Copilot",
+    "license": "GPL-3.0 license",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Richasy/Bili.Copilot/releases/download/v2.2505.2.0/BiliCopilot_2.2505.2.0_x64.7z",
+            "hash": "e560580f1eb5ea60ca50d592aaef4c7ea213ed0c96e534b0f96dbe78757f3bb1"
+        },
+        "arm64": {
+            "url": "https://github.com/Richasy/Bili.Copilot/releases/download/v2.2505.2.0/BiliCopilot_2.2505.2.0_arm64.7z",
+            "hash": "22DF89C510A43966BA040F403BA899B0E354C573D8B85272AB3DA1641A31C4BD"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$url\" \"$dir\"",
+            ". \"$dir\\install.ps1\""
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Richasy/Bili.Copilot/releases/download/v$version/BiliCopilot_$version_x64.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/Richasy/Bili.Copilot/releases/download/v$version/BiliCopilot_$version_arm64.7z"
+            }
+        }
+    }
+}

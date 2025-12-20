@@ -3,7 +3,10 @@
     "description": "Microsoft .NET Framework 10.0.100 Developer Pack",
     "homepage": "https://dotnet.microsoft.com/zh-cn/download/dotnet/10.0",
     "license": "MIT",
-    "notes": "keep the default directory of dotnet unchanged, this installation will not affect other .NET installations",
+    "notes": [
+        "This manifest will not affect the installation of other versions and is compatible with dotnet-scoop.",
+        "You can now remove this installer with 'scoop uninstall -p dotnet-default'."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.101/dotnet-sdk-10.0.101-win-x64.zip",
