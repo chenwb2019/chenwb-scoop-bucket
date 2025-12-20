@@ -14,7 +14,7 @@
         "Download from typoraio.cn mirror site.",
         "The configuration files and user data are stored in persistent directory.",
         "run 'scoop install chenwb-scoop-bucket/See-Yue-Typora' to install See Yue theme for Typora.",
-        "If you want to remove the configuration files and user data when uninstalling, run 'scoop uninstall typora-cn -purge'."
+        "If you want to remove the configuration files and user data when uninstalling, run 'scoop uninstall typora-cn -p'."
     ],
     "architecture": {
         "64bit": {
