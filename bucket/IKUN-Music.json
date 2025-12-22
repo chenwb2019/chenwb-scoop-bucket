@@ -1,5 +1,5 @@
 {
-    "version": "3.3.0",
+    "version": "2.0",
     "description": "A lightweight music player that supports various audio formats and provides a user-friendly interface.",
     "homepage": "https://github.com/ikunshare/ikun-music-desktop",
     "license": "Apache-2.0",
@@ -36,7 +36,7 @@
     ],
     "checkver": {
         "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
-        "regex": "/tag\\/v?(\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*)?)\"/"
+        "regex": "v?(\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*)?)\"/"
     },
     "autoupdate": {
         "architecture": {
