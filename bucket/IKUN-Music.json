@@ -36,7 +36,7 @@
     ],
     "checkver": {
         "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
-        "regex": "/tag\\/v([\\d.]+)\"/"
+        "regex": "/tag\\/v?(\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*)?)\"/"
     },
     "autoupdate": {
         "architecture": {
