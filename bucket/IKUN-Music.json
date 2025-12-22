@@ -34,17 +34,32 @@
             "IKUN Music"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+        "regex": "/tag\\/v([\\d.]+)\"/"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win_x64-green.7z"
+                "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win_x64-green.7z",
+                "hash": {
+                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+                    "regex": "v$version-win_x64-green.7z.*?$sha256"
+                }
             },
             "32bit": {
-                "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win7_x86-green.7z"
+                "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win7_x86-green.7z",
+                "hash": {
+                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+                    "regex": "v$version-win7_x86-green.7z.*?$sha256"
+                }
             },
             "arm64": {
-                "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win_arm64-green.7z"
+                "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win_arm64-green.7z",
+                "hash": {
+                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+                    "regex": "v$version-win_arm64-green.7z.*?$sha256"
+                }
             }
         }
     }
