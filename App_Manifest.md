@@ -7,13 +7,13 @@
   - [ ] Ccompare
   - [x] Clashmi
   - [ ] Dingtalk
-  - [ ] Dotnet-default
-  - [ ] Dotnet-scoop
+  - [x] Dotnet-default
+  - [x] Dotnet-scoop
   - [ ] Doubao
   - [ ] Douyin
   - [ ] DouyinSelection
   - [ ] EasySpider
-  - [ ] Firefox-cn
+  - [x] ==Firefox-scoop==
   - [ ] HEU-KMS-Activator
   - [ ] IKUN-Music
   - [ ] Lucky
@@ -30,7 +30,7 @@
   - [ ] Steampp
   - [x] Typora-cn
   - [x] Typora-free
-  - [ ] Typora-nightly
+  - [x] Typora-nightly
   - [ ] ~~vscode~~
   - [ ] Webdav
   - [ ] Wechat

@@ -1,14 +1,14 @@
 {
-    "version":"nightly",
+    "version": "nightly",
     "description": "A markdown editor downloaded by mirror",
     "homepage": "https://typoraio.cn",
-    "license":{
+    "license": {
         "identifier": "Proprietary",
         "url": "https://support.typora.io/License-Agreement/"
     },
     "suggest": {
-        "pandoc":"pandoc",
-        "See-Yue-Typora":"See-Yue-Typora"
+        "pandoc": "pandoc",
+        "See-Yue-Typora": "See-Yue-Typora"
     },
     "notes": [
         "Download from typoraio.cn mirror site.",
@@ -17,11 +17,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url":"https://downloads.typoraio.cn/windows/typora-setup-x64.exe",
-            "hash":"sha256:412962eba7c867f32481423f8828030e0b03062a39917743bf54593a7ae81c6a"
+            "url": "https://downloads.typoraio.cn/windows/typora-setup-x64.exe",
+            "hash": "sha256:412962eba7c867f32481423f8828030e0b03062a39917743bf54593a7ae81c6a"
         },
         "32bit": {
-            "url":"https://downloads.typoraio.cn/windows/typora-setup-ia32.exe",
+            "url": "https://downloads.typoraio.cn/windows/typora-setup-ia32.exe",
             "hash": "07968482e9dc52bf5fa57778aaf6dd17a488a84c70d46aae7acb626d5c0bcd3e"
         }
     },
@@ -30,6 +30,11 @@
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "$configpath = Join-Path $env:AppData 'Typora'",
         "Move-Data_dir -data_dir $configpath -persist_dir $persist_dir"
+    ],
+    "pre_uninstall": [
+        "if ($purge) {",
+        "    Remove-Item -Recurse -Force \"$env:AppData\\Typora\"",
+        "}"
     ],
     "bin": [
         [
@@ -42,5 +47,15 @@
             "Typora.exe",
             "Typora-nightly"
         ]
-    ]
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.typoraio.cn/windows/typora-setup-x64.exe"
+            },
+            "32bit": {
+                "url": "https://downloads.typoraio.cn/windows/typora-setup-ia32.exe"
+            }
+        }
+    }
 }

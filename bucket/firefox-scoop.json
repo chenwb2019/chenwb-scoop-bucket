@@ -19,29 +19,19 @@
     },
     "extract_dir": "core",
     "post_install": [
+        ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "$profilePath = Join-Path $env:AppData 'Mozilla\\Firefox'",
-        "$persistPath = \"$persist_dir\"",
-        "if (!(Test-Path $persistPath)) { New-Item -Path $persistPath -ItemType Directory | Out-Null }",
-        "if (Test-Path $profilePath) { ",
-        "    $testlink = (Get-Item $profilePath).LinkType",
-        "    if ($testlink -ne 'Junction') {",
-        "        Get-ChildItem -Path $profilePath | Move-Item -Destination $persistPath -Force",
-        "        Remove-Item $profilePath -force",
-        "        New-Item -ItemType Junction -Path $profilePath -Target $persistPath -Force | Out-Null",
-        "    }",
-        "} else {",
-        "    New-Item -ItemType Junction -Path $profilePath -Target $persistPath -Force | Out-Null",
-        "}"
+        "Move-Data_dir -data_dir $profilePath -persist_dir $persist_dir"
     ],
     "bin": "firefox.exe",
     "shortcuts": [
         [
             "firefox.exe",
-            "Mozilla Firefox-cn"
+            "Mozilla Firefox"
         ],
         [
             "firefox.exe",
-            "Firefox-cn Profile Manager",
+            "Firefox Profile Manager",
             "-P"
         ]
     ],

@@ -6,7 +6,7 @@
     "notes": [
         "Manage dotnet runtimes and SDKs with scoop persisted data directories. And it's better to run 'scoop hold dotnet-scoop' to prevent automatic updates.",
         "Restart to start using dotnet.",
-        "If you intend to manage dotnet via the default method, run 'scoop uninstall dotnet-scoop -p', and this action will retain sdks and runtimes data in the default location, then you can choose to delete or keep them and reinstall dotnet following the officially recommended approach.",
+        "If you intend to manage dotnet via the default method, run 'scoop uninstall dotnet-scoop -p', and this action will retain runtimes data in the default location, then you can choose to delete or keep them and reinstall dotnet following the officially recommended approach.",
         "If you have installed multiple dotnet versions with the same major version number, it's better to manually remove the older ones in persistent directories to eliminate unnecessary storage overhead, as dotnet maintains backward compatibility across builds of the same major version."
     ],
     "architecture": {
@@ -31,14 +31,22 @@
         "}",
         "New-ItemProperty -Path \"$reg_install_path\" -Name \"InstallLocation\" -Value $dir -Force | Out-Null",
         "New-ItemProperty -Path \"$reg_install_path\\sharedhost\" -Name \"Version\" -Value $version -Force | Out-Null",
-        "New-ItemProperty -Path \"$reg_install_path\\sharedhost\" -Name \"Path\" -Value \"$persist_dir\\shared\" -Force | Out-Null"
+        "New-ItemProperty -Path \"$reg_install_path\\sharedhost\" -Name \"Path\" -Value $dir -Force | Out-Null"
     ],
     "post_install": [
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "$runtimepath = \"$env:ProgramFiles\\dotnet\\shared\"",
         "Move-Data_dir \"$runtimepath\" \"$persist_dir\\shared\"",
         "$sdkpath = \"$env:ProgramFiles\\dotnet\\sdk\"",
-        "Move-Data_dir \"$sdkpath\" \"$persist_dir\\sdk\""
+        "Move-Data_dir \"$sdkpath\" \"$persist_dir\\sdk\"",
+        "if (Test-Path \"$dir\\sdk.original\") {",
+        "   Move-Item -Path \"$dir\\sdk.original\\*\" -Destination \"$dir\\sdk\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "   Remove-Item -Path \"$dir\\sdk.original\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}",
+        "if (Test-Path \"$dir\\shared.original\") {",
+        "   Move-Item -Path \"$dir\\shared.original\\*\" -Destination \"$dir\\shared\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "   Remove-Item -Path \"$dir\\shared.original\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}"
     ],
     "pre_uninstall": [
         "if (!(is_admin)) {",

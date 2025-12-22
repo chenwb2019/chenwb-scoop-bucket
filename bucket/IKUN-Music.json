@@ -1,7 +1,7 @@
 {
     "version": "3.3.0-fix.1",
     "description": "A lightweight music player that supports various audio formats and provides a user-friendly interface.",
-    "homepage": "https://github.com/ikunshare/lxmusic",
+    "homepage": "https://github.com/ikunshare/ikun-music-desktop",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
@@ -19,29 +19,19 @@
     },
     "post_install":[
         "$datapath = Join-Path $env:AppData 'ikun-music-desktop'",
-        "$persistpath = Join-Path $persist_dir 'userdata'",
-        "if (!(Test-Path $persistpath)) { New-Item -Path $persistpath -ItemType Directory | Out-Null }",
-        "if (Test-Path $datapath) { ",
-        "    $testlink = (Get-Item $datapath).LinkType",
-        "    if ($testlink -ne 'Junction') {",
-        "        Get-ChildItem -Path $datapath | Move-Item -Destination $persistpath -Force",
-        "        Remove-Item $datapath -force",
-        "        New-Item -ItemType Junction -Path $datapath -Target $persistpath -Force | Out-Null",
-        "    }",
-        "} else {",
-        "    New-Item -ItemType Junction -Path $datapath -Target $persistpath -Force | Out-Null",
-        "}"
+        ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
+        "Move-Data_dir -data_dir $datapath -persist_dir $persist_dir"
     ],
     "bin": [
         [
             "ikun-music-desktop.exe",
-            "LX Music"
+            "IKUN Music"
         ]
     ],
     "shortcuts": [
         [
             "ikun-music-desktop.exe",
-            "LX Music"
+            "IKUN Music"
         ]
     ],
     "checkver": "github",
