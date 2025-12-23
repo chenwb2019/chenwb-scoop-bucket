@@ -25,7 +25,7 @@
     "bin": [["ikun-music-desktop.exe", "IKUN Music"]],
     "shortcuts": [["ikun-music-desktop.exe", "IKUN Music"]],
     "checkver": {
-        "url": "https://github.com/ikunshare/ikun-music-desktop/releases/tag/",
+        "url": "https://github.com/ikunshare/ikun-music-desktop/tags/",
         "regex": "v?(\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*)?)\"/"
     },
     "autoupdate": {
