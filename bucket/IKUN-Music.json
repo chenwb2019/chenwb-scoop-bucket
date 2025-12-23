@@ -1,20 +1,20 @@
 {
-    "version": "3.0.0-fix.1",
+    "version": "3.3.0-fix.4",
     "description": "A lightweight music player that supports various audio formats and provides a user-friendly interface.",
     "homepage": "https://github.com/ikunshare/ikun-music-desktop",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0/ikun-music-desktop-v3.3.0-win_x64-green.7z",
-            "hash": "f0c22ab165503bbc99dbb8468370001fbd1768e1bb607b01d5838030bc7bd3b6"
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.4/ikun-music-desktop-v3.3.0-fix.4-win_x64-green.7z",
+            "hash": "b0a356d6ad2c5a8233b307d6aa21607b55bfbb10828f420d5d7cdc6ba16e40e3"
         },
         "32bit": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0/ikun-music-desktop-v3.3.0-win7_x86-green.7z",
-            "hash": "e381272767954a81e5d87da9f02598689a8b870d898465abc460384fcda0e84b"
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.4/ikun-music-desktop-v3.3.0-fix.4-win7_x86-green.7z",
+            "hash": "c27470dd641ffdafa21966ea2ec744646f795b402b106bee811e853327070ffa"
         },
         "arm64": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0/ikun-music-desktop-v3.3.0-win_arm64-green.7z",
-            "hash": "7932cfe2d958ebe7600e96ff89527271d619bf59e7bb04f6eaa8f5a44d66066a"
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.4/ikun-music-desktop-v3.3.0-fix.4-win_arm64-green.7z",
+            "hash": "395d9f5f8a844895a7b85bbaa920317881d0f21283c8c35fff455eb442eaea37"
         }
     },
     "post_install": [
@@ -22,11 +22,19 @@
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "Move-Data_dir -data_dir $datapath -persist_dir $persist_dir"
     ],
-    "pre_uninstall": [
-        "Remove-Item (Join-Path $env:AppData 'ikun-music-desktop') -Recurse -Force -ErrorAction SilentlyContinue"
+    "pre_uninstall": "Remove-Item (Join-Path $env:AppData 'ikun-music-desktop') -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": [
+        [
+            "ikun-music-desktop.exe",
+            "IKUN Music"
+        ]
     ],
-    "bin": [["ikun-music-desktop.exe", "IKUN Music"]],
-    "shortcuts": [["ikun-music-desktop.exe", "IKUN Music"]],
+    "shortcuts": [
+        [
+            "ikun-music-desktop.exe",
+            "IKUN Music"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/ikunshare/ikun-music-desktop/",
         "regex": "releases/tag/v?(\\d+\\.\\d+\\.\\d+(?:-[A-Za-z0-9]+(?:\\.[A-Za-z0-9]+)*)?)"
