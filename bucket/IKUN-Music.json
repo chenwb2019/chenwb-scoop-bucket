@@ -22,20 +22,10 @@
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "Move-Data_dir -data_dir $datapath -persist_dir $persist_dir"
     ],
-    "bin": [
-        [
-            "ikun-music-desktop.exe",
-            "IKUN Music"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "ikun-music-desktop.exe",
-            "IKUN Music"
-        ]
-    ],
+    "bin": [["ikun-music-desktop.exe", "IKUN Music"]],
+    "shortcuts": [["ikun-music-desktop.exe", "IKUN Music"]],
     "checkver": {
-        "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+        "url": "https://github.com/ikunshare/ikun-music-desktop/releases/tag/",
         "regex": "v?(\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*)?)\"/"
     },
     "autoupdate": {
@@ -43,21 +33,21 @@
             "64bit": {
                 "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win_x64-green.7z",
                 "hash": {
-                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/tag/v$version",
                     "regex": "v$version-win_x64-green.7z.*?$sha256"
                 }
             },
             "32bit": {
                 "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win7_x86-green.7z",
                 "hash": {
-                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/tag/v$version",
                     "regex": "v$version-win7_x86-green.7z.*?$sha256"
                 }
             },
             "arm64": {
                 "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v$version/ikun-music-desktop-v$version-win_arm64-green.7z",
                 "hash": {
-                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/",
+                    "url": "https://github.com/ikunshare/ikun-music-desktop/releases/tag/v$version",
                     "regex": "v$version-win_arm64-green.7z.*?$sha256"
                 }
             }
