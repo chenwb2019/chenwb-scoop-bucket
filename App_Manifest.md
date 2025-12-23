@@ -12,7 +12,7 @@
   - [ ] Doubao
   - [ ] Douyin
   - [ ] DouyinSelection
-  - [ ] EasySpider
+  - [x] EasySpider
   - [x] ==Firefox-scoop==
   - [ ] HEU-KMS-Activator
   - [ ] IKUN-Music
