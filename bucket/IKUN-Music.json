@@ -26,7 +26,7 @@
     "shortcuts": [["ikun-music-desktop.exe", "IKUN Music"]],
     "checkver": {
         "url": "https://github.com/ikunshare/ikun-music-desktop/tags/",
-        "regex": "([\\d+\\.\\d+\\.\\d]+(?:-[a-zA-Z0-9]+(?:\\.[a-zA-Z0-9]+)*)?)"
+        "regex": "v?(\\d+\\.\\d+\\.\\d+(?:-[A-Za-z0-9]+(?:\\.[A-Za-z0-9]+)*)?)"
     },
     "autoupdate": {
         "architecture": {
