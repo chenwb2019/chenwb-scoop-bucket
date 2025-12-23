@@ -1,39 +1,39 @@
-- Plan
-  - [x] Alas
-  - [ ] BaiduNetDisk
-  - [ ] ~~Bili.Copilot~~
-  - [x] Bongocat
-  - [ ] CC98-Desktop
-  - [ ] Ccompare
-  - [x] Clashmi
-  - [ ] Dingtalk
-  - [x] Dotnet-default
-  - [x] Dotnet-scoop
-  - [ ] Doubao
-  - [ ] Douyin
-  - [ ] DouyinSelection
-  - [x] EasySpider
-  - [x] ==Firefox-scoop==
-  - [ ] HEU-KMS-Activator
-  - [ ] IKUN-Music
-  - [ ] Lucky
-  - [ ] MUMU-Player
-  - [ ] Musicfree
-  - [ ] Nofences
-  - [ ] Notepad--
-  - [ ] Onlywrite
-  - [ ] Pixpin
-  - [ ] QuarkCloudDrive
-  - [ ] QTTabBar
-  - [x] See-Yue-Typora
-  - [ ] Steam
-  - [ ] Steampp
-  - [x] Typora-cn
-  - [x] Typora-free
-  - [x] Typora-nightly
-  - [ ] ~~vscode~~
-  - [ ] Webdav
-  - [ ] Wechat
-  - [ ] Xdiary
-  - [ ] ZJU-Connect-for-Windows
-- Deprecated
+-   Plan
+    -   [x] Alas
+    -   [ ] BaiduNetDisk
+    -   [ ] ~~Bili.Copilot~~
+    -   [x] Bongocat
+    -   [ ] CC98-Desktop
+    -   [ ] Ccompare
+    -   [x] Clashmi
+    -   [ ] Dingtalk
+    -   [x] Dotnet-default
+    -   [x] Dotnet-scoop
+    -   [ ] Doubao
+    -   [ ] Douyin
+    -   [ ] DouyinSelection
+    -   [x] EasySpider
+    -   [x] ==Firefox-scoop==
+    -   [ ] HEU-KMS-Activator
+    -   [x] IKUN-Music
+    -   [ ] Lucky
+    -   [ ] MUMU-Player
+    -   [ ] Musicfree
+    -   [ ] Nofences
+    -   [ ] Notepad--
+    -   [ ] Onlywrite
+    -   [ ] Pixpin
+    -   [ ] QuarkCloudDrive
+    -   [ ] QTTabBar
+    -   [x] See-Yue-Typora
+    -   [ ] Steam
+    -   [ ] Steampp
+    -   [x] Typora-cn
+    -   [x] Typora-free
+    -   [x] Typora-nightly
+    -   [ ] ~~vscode~~
+    -   [ ] Webdav
+    -   [ ] Wechat
+    -   [ ] Xdiary
+    -   [x] ZJU-Connect-for-Windows
+-   Deprecated

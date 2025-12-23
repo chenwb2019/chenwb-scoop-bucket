@@ -22,11 +22,14 @@
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "Move-Data_dir -data_dir $datapath -persist_dir $persist_dir"
     ],
+    "pre_uninstall": [
+        "Remove-Item (Join-Path $env:AppData 'ikun-music-desktop') -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
     "bin": [["ikun-music-desktop.exe", "IKUN Music"]],
     "shortcuts": [["ikun-music-desktop.exe", "IKUN Music"]],
     "checkver": {
-        "url": "https://github.com/ikunshare/ikun-music-desktop/tags/",
-        "regex": "v?(\\d+\\.\\d+\\.\\d+(?:-[A-Za-z0-9]+(?:\\.[A-Za-z0-9]+)*)?)"
+        "url": "https://github.com/ikunshare/ikun-music-desktop/",
+        "regex": "releases/tag/v?(\\d+\\.\\d+\\.\\d+(?:-[A-Za-z0-9]+(?:\\.[A-Za-z0-9]+)*)?)"
     },
     "autoupdate": {
         "architecture": {

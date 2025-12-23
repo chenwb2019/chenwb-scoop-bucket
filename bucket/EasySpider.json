@@ -27,8 +27,8 @@
     "bin": "EasySpider.exe",
     "shortcuts": [["EasySpider.exe", "EasySpider"]],
     "checkver": {
-        "url": "https://github.com/NaiboWang/EasySpider/release/tags",
-        "regex": "v?([\\d.]+)\""
+        "url": "https://github.com/NaiboWang/EasySpider/releases/",
+        "regex": "tag/v?([\\d.]+)\""
     },
     "autoupdate": {
         "architecture": {
