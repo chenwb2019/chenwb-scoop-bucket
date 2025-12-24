@@ -6,25 +6,23 @@
     "architecture": {
         "64bit": {
             "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-1.2.3/Windows-1.2.3.rar",
-            "hash": "sha256:2c84ab9c1d14331c9c13fb0474300e603140dcf135cc69053162be84f5cf34b5"
+            "hash": "sha256:2c84ab9c1d14331c9c13fb0474300e603140dcf135cc69053162be84f5cf34b5",
+            "extract_dir": "Windows-1.2.3"
         }
     },
-    "installer": {
-        "script":[
-            "$subdir = Join-Path -Path \"$dir\" -ChildPath \"Windows-1.2.3\"",
-            "if (Test-Path \"$subdir\") { Move-Item -Path \"$subdir\\*\" -Destination \"$dir\" -Force; Remove-Item -Path \"$subdir\" -Recurse -Force }"
-        ]
-    },
-    "bin": "onlywriter.exe",
-    "shortcuts": [
-        [
-            "onlywriter.exe",
-            "onlywrite"
-        ]
+    "post_install": [
+        "$configpath = \"$env:APPDATA\\com.only.writer\"",
+        ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
+        "Move-Data_dir -data_dir $configpath -persist_dir $persist_dir"
     ],
+    "pre_uninstall": [
+        "Remove-Item -Path \"$env:APPDATA\\com.only.writer\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
+    "bin": "onlywriter.exe",
+    "shortcuts": [["onlywriter.exe", "onlywrite"]],
     "checkver": {
-        "url": "https://gitee.com/knowshub/only-write",
-        "regex": "releases/tag/Windows-([\\d.]+)"
+        "url": "https://gitee.com/knowshub/only-write/releases",
+        "regex": "Windows-([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
@@ -33,7 +31,8 @@
                 "hash": {
                     "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-$version/Windows-$version.rar",
                     "regex": "sha256:([a-f0-9]{64})"
-                }
+                },
+                "extract_dir": "Windows-$version"
             }
         }
     }

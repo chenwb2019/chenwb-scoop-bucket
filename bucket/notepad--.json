@@ -9,7 +9,7 @@
             "hash": "7a28fcb21aa5e7d577cdb788b100e50e02762926022e80bcfcb488e4542bc3d1"
         }
     },
-    "post_install":[
+    "post_install": [
         "$cc_root = \"$dir\".Replace('\\', '\\\\')",
         "$APPName = 'Notepad--'",
         "$exeName = 'Notepad--.exe'",
@@ -41,14 +41,5 @@
         "reg import \"$dir\\unregister_application.reg\" 2>&1 | Out-Null"
     ],
     "bin": "Notepad--.exe",
-    "shortcuts": [
-        [
-            "Notepad--.exe",
-            "Notepad--"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/cxasm/notepad--/releases/download/notepad-v$version/Notepad--v$version-win10-portable.zip"
-    }
+    "shortcuts": [["Notepad--.exe", "Notepad--"]]
 }

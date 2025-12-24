@@ -21,16 +21,9 @@
         "stop-process -name ClashMI -ErrorAction SilentlyContinue",
         "Remove-Item \"$env:APPDATA\\clashmi\" -Recurse -Force -ErrorAction SilentlyContinue"
     ],
-    "persist": [
-        "portable"
-    ],
+    "persist": ["portable"],
     "bin": "ClashMI.exe",
-    "shortcuts": [
-        [
-            "ClashMI.exe",
-            "ClashMI"
-        ]
-    ],
+    "shortcuts": [["ClashMI.exe", "ClashMI"]],
     "checkver": {
         "github": "https://github.com/KaringX/clashmi"
     },

@@ -29,16 +29,7 @@
         "reg import \"$dir\\uninstall-context.reg\" 2>&1 | Out-Null"
     ],
     "bin": "CCompare.exe",
-    "shortcuts": [
-        [
-            "CCompare.exe",
-            "CCompare"
-        ]
-    ],
-    "checkver": {
-        "url": "https://gitee.com/cxasm/cc-compare/releases",
-        "regex": "v([\\d.]+)"
-    },
+    "shortcuts": [["CCompare.exe", "CCompare"]],
     "autoupdate": {
         "architecture": {
             "64bit": {

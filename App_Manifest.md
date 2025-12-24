@@ -12,6 +12,7 @@
     -   [ ] Doubao
     -   [ ] Douyin
     -   [ ] DouyinSelection
+    -   [x] ==DskManager==
     -   [x] EasySpider
     -   [x] ==Firefox-scoop==
     -   [ ] HEU-KMS-Activator
@@ -21,19 +22,19 @@
     -   [ ] Musicfree
     -   [ ] Nofences
     -   [ ] Notepad--
-    -   [ ] Onlywrite
+    -   [x] Onlywrite
     -   [ ] Pixpin
     -   [ ] QuarkCloudDrive
     -   [ ] QTTabBar
     -   [x] See-Yue-Typora
     -   [ ] Steam
-    -   [ ] Steampp
+    -   [x] Steampp
     -   [x] Typora-cn
     -   [x] Typora-free
     -   [x] Typora-nightly
     -   [ ] ~~vscode~~
     -   [ ] Webdav
     -   [ ] Wechat
-    -   [ ] Xdiary
+    -   [x] ==Xdiarys==
     -   [x] ZJU-Connect-for-Windows
 -   Deprecated
