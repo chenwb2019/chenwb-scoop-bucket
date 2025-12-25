@@ -4,8 +4,13 @@
     "homepage": "https://github.com/indiff/qttabbar",
     "license": "GPL-3.0-only",
     "url": "https://github.com/indiff/qttabbar/releases/download/v1.5.6.-beta.1/QTTabBar.Setup_v1.5.6-beta.1_zh.2024.zip",
-    "hash": "aae4f2bec2f4ca0ede488638b9f31543b7cfcbfc90f1c6ddb74f5fb47b890287",
-    "extract_dir": "QTTabBar",
+    "hash": "a9a4f3ae4572336358fcdc3d95fcf4426e08a5fccb5df085638354d2136fcfee",
+    "installer": {
+        "scripts": [
+            "Start-Process msiexec.exe -ArgumentList '/i', \"$dir\\QTTabBar Setup.msi\", '/qn', ',norestart' -Wait",
+            "Remove-Item \"$dir\\QTTabBar Setup.msi\" -Force"
+        ]
+    },
     "post_install": [
         "$logpath = Join-Path $env:AppData 'QTTabBar'",
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",

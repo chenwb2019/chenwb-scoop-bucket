@@ -1,7 +1,6 @@
 -   Plan
     -   [x] Alas
     -   [ ] BaiduNetDisk
-    -   [ ] ~~Bili.Copilot~~
     -   [x] Bongocat
     -   [ ] CC98-Desktop
     -   [ ] Ccompare
@@ -19,13 +18,12 @@
     -   [x] IKUN-Music
     -   [ ] Lucky
     -   [ ] MUMU-Player
-    -   [ ] Musicfree
-    -   [ ] Nofences
+    -   [ ] ~~Musicfree~~
+    -   [x] Nofences
     -   [ ] Notepad--
     -   [x] Onlywrite
     -   [ ] Pixpin
     -   [ ] QuarkCloudDrive
-    -   [ ] QTTabBar
     -   [x] See-Yue-Typora
     -   [ ] Steam
     -   [x] Steampp
@@ -38,3 +36,5 @@
     -   [x] ==Xdiarys==
     -   [x] ZJU-Connect-for-Windows
 -   Deprecated
+    -   [ ] Bili.Copilot
+    -   [ ] QTTabBar

@@ -1,0 +1,33 @@
+{
+    "version": "1.8",
+    "description": "A tool to manage and organize your desktop icons.",
+    "homepage": "https://github.com/Twometer/NoFences",
+    "license": "MIT",
+    "notes": "run 'reg import install_startup.reg' to enable startup, 'reg import uninstall_startup.reg' to disable it",
+    "url": "https://github.com/Twometer/NoFences/releases/download/v1.8/NoFences.exe#/dl.7z",
+    "hash": "c68515e759f13a6af53c6c83cf14894e5dad1f22ab5b3c3a4d81ad7425105e0f",
+    "bin": "NoFences.exe",
+    "shortcuts": [["NoFences.exe", "NoFences", "", "NoFences.exe"]],
+    "post_install": [
+        "$cc_root = \"$dir\".Replace('\\', '\\\\')",
+        "$APPName = 'NoFences'",
+        "$exeName = 'NoFences.exe'",
+        "'install_startup.reg', 'uninstall_startup.reg' | ForEach-Object {",
+        "    $content = Get-Content \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Startup\\$_\"",
+        "    $content = $content.Replace('$cc_root', $cc_root)",
+        "    $content = $content.Replace('$APPName', $APPName)",
+        "    $content = $content.Replace('$exeName', $exeName)",
+        "    if ($global) {",
+        "       $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    Set-Content \"$dir\\$_\" $content -Encoding Ascii",
+        "}"
+    ],
+    "pre_uninstall": [
+        "reg import \"$dir\\uninstall_startup.reg\" 2>&1 | Out-Null"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Twometer/NoFences/releases/download/v$version/NoFences.exe#dl.7z"
+    }
+}
