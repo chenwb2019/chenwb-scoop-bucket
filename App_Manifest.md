@@ -28,7 +28,7 @@
     -   [x] Steampp
     -   [x] Typora-cn
     -   [x] Typora-free
-    -   [x] Typora-nightly
+    -   [x] ~~Typora-nightly~~
     -   [ ] ~~vscode~~
     -   [x] Webdav
     -   [ ] Wechat

@@ -19,10 +19,7 @@
     "shortcuts": [["fsmainx64.exe", "Dskmanager"]],
     "checkver": {
         "url": "https://www.dskmanager.com/",
-        "regex": "版本[:：]\\s([\\d.+]+)",
-        "hash": {
-            "mode": "download"
-        }
+        "regex": "版本[:：]\\s([\\d.+]+)"
     },
     "autoupdate": {
         "url": "https://download.dskmanager.com/dskmanager_officialsite_x64.exe#/dl.7z",

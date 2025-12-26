@@ -11,10 +11,7 @@
     "persist": ["Db", "config.ini"],
     "checkver": {
         "url": "https://www.xdiarys.com/",
-        "re": "版本[:：]\\s([\\d.+]+)",
-        "hash": {
-            "mode": "download"
-        }
+        "re": "版本[:：]\\s([\\d.+]+)"
     },
     "autoupdate": {
         "url": "https://download.xdiarys.com/windows/xdiarys-green.7z",
