@@ -14,15 +14,14 @@
     -   [x] ==DskManager==
     -   [x] EasySpider
     -   [x] ==Firefox-scoop==
-    -   [ ] HEU-KMS-Activator
+    -   [ ] ~~HEU-KMS-Activator~~
     -   [x] IKUN-Music
-    -   [ ] Lucky
+    -   [ ] ~~Lucky~~
     -   [ ] MUMU-Player
-    -   [ ] ~~Musicfree~~
+    -   [x] Musicfree
     -   [x] Nofences
     -   [ ] Notepad--
     -   [x] Onlywrite
-    -   [ ] Pixpin
     -   [ ] QuarkCloudDrive
     -   [x] See-Yue-Typora
     -   [ ] Steam
@@ -31,10 +30,11 @@
     -   [x] Typora-free
     -   [x] Typora-nightly
     -   [ ] ~~vscode~~
-    -   [ ] Webdav
+    -   [x] Webdav
     -   [ ] Wechat
     -   [x] ==Xdiarys==
     -   [x] ZJU-Connect-for-Windows
 -   Deprecated
     -   [ ] Bili.Copilot
+    -   [ ] Pixpin
     -   [ ] QTTabBar

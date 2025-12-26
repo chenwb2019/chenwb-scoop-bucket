@@ -3,25 +3,26 @@
     "description": "QTTabBar is a tabbed file explorer add-on for Windows.",
     "homepage": "https://github.com/indiff/qttabbar",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/indiff/qttabbar/releases/download/v1.5.6.-beta.1/QTTabBar.Setup_v1.5.6-beta.1_zh.2024.zip",
-    "hash": "a9a4f3ae4572336358fcdc3d95fcf4426e08a5fccb5df085638354d2136fcfee",
-    "installer": {
-        "scripts": [
-            "Start-Process msiexec.exe -ArgumentList '/i', \"$dir\\QTTabBar Setup.msi\", '/qn', ',norestart' -Wait",
-            "Remove-Item \"$dir\\QTTabBar Setup.msi\" -Force"
-        ]
-    },
+    "url": "https://github.com/indiff/qttabbar/releases/download/v1.5.6.-beta.1/QTTabBar.Setup.Plugins._v1.5.6-beta.1_en.2024.msi",
+    "hash": "aae4f2bec2f4ca0ede488638b9f31543b7cfcbfc90f1c6ddb74f5fb47b890287",
+    "extract_dir": "QTTabBar",
+    "pre_install": [
+        "if (!(is_admin)) {",
+        "   throw 'Administrator privileges are required to install QTTabBar.'",
+        "}"
+    ],
     "post_install": [
         "$logpath = Join-Path $env:AppData 'QTTabBar'",
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
-        "Move-Data_dir -data_dir $logpath -persist_dir \"$persist_dir\\log\""
+        "Move-Data_dir -data_dir $logpath -persist_dir \"$persist_dir\\log\"",
+        "Move-Item -Path \"$dir\\QTTabBar.dll\" -Destination \"C:Windows\\assembly\\GAC_MSIL\\QTTabBar\\1.5.6.1__973461f1cd23d8eb\" -Force -ErrorAction SilentlyContinue"
     ],
     "checkver": {
         "url": "https://github.com/indiff/qttabbar/releases/",
-        "regex": "QTTabBar.Setup_v([\\w.-]+)_zh\\.[\\d]+\\.zip"
+        "regex": "QTTabBar.Setup.Plugins.v([\\d.]+)_en.2024.msi"
     },
     "autoupdate": {
-        "url": "https://github.com/indiff/qttabbar/releases/latest/download/QTTabBar.Setup_v$version_zh.2024.zip",
+        "url": "https://github.com/indiff/qttabbar/releases/latest/download/QTTabBar.Setup.Plugins._v$version_en.2024.msi",
         "hash": {
             "mode": "download"
         }

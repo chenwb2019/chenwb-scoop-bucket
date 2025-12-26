@@ -9,11 +9,11 @@
             "hash": "b84ef7feced17a95dd704db9968867726008d782619d511656e5ece059951399"
         }
     },
+    "extract_to": "Temp",
     "installer": {
         "script": [
-            "$inner = Get-ChildItem -Path \"$dir\" -Filter \"*.zip\" | Where-Object { $_.FullName -ne \"$dir\\$fname\" } | Select-Object -First 1",
-            "if ($inner) { Expand-Archive -Path $inner.FullName -DestinationPath \"$dir\" -Force }",
-            "Remove-Item $inner.FullName -Force"
+            "Expand-7zipArchive \"$dir\\Temp\\MusicFree-*-portable.zip\" \"$dir\"",
+            "Remove-Item \"$dir\\Temp\" -Recurse -Force"
         ]
     },
     "persist": "portable",
