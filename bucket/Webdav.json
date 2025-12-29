@@ -32,13 +32,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/hacdias/webdav/releases/download/v$version/webdav_$version_checksums.txt",
-            "mode": "extract",
-            "find": {
-                "64bit": "([a-fA-F0-9]{64})\\s+windows-amd64-webdav.zip",
-                "32bit": "([a-fA-F0-9]{64})\\s+windows-386-webdav.zip",
-                "arm64": "([a-fA-F0-9]{64})\\s+windows-arm64-webdav.zip"
-            }
+            "url": "https://github.com/hacdias/webdav/releases/download/v$version/webdav_$version_checksums.txt"
         }
     }
 }
