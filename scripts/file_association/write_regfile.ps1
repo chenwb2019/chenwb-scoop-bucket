@@ -56,4 +56,3 @@ function write_file_association_reg {
     }
 }
 
-export-modulemember -function write_file_association_reg
