@@ -1,6 +1,6 @@
 # A third-party scoop bucket
 
-[![Tests](https://github.com/chenwb2019/chenwb-scoop-bucket/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/chenwb2019/chenwb-scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml)
+[![Tests](https://github.com/chenwb2019/chenwb-scoop-bucket/actions/workflows/ci.yml/badge.svg)](https://github.com/chenwb2019/chenwb-scoop-bucket/actions/workflows/ci.yml) [![Excavator](https://github.com/chenwb2019/chenwb-scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/chenwb2019/chenwb-scoop-bucket/actions/workflows/excavator.yml)
 
 ### The software in this bucket
 
@@ -33,4 +33,5 @@
 ### Thanks
 
 [scoopInstaller/extras](https://github.com/scoopInstaller/extras)
+
 [xrgzs/sdoog](https://github.com/xrgzs/sdoog)
