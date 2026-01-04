@@ -32,5 +32,5 @@
 
 ### Thanks
 
-[scoopInstaller/extras](https://github.com/scoopInstaller/extras) 
+[scoopInstaller/extras](https://github.com/scoopInstaller/extras)
 [xrgzs/sdoog](https://github.com/xrgzs/sdoog)
