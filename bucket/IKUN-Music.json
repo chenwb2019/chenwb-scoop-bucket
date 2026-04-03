@@ -1,20 +1,20 @@
 {
-    "version": "3.3.0-fix.8",
+    "version": "3.3.0-fix.7",
     "description": "A lightweight music player that supports various audio formats and provides a user-friendly interface.",
     "homepage": "https://github.com/ikunshare/ikun-music-desktop",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.8/ikun-music-desktop-v3.3.0-fix.8-win_x64-green.7z",
-            "hash": "da88e498c397a2da0bd12838d568aad327293bfb3e6b90defef9e0765392feaa"
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.7/ikun-music-desktop-v3.3.0-fix.7-win_x64-green.7z",
+            "hash": "20108c39ea8e995939fb7fff87946a75d3ea70b646f83666e184a33968b53c36"
         },
         "32bit": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.8/ikun-music-desktop-v3.3.0-fix.8-win7_x86-green.7z",
-            "hash": "71b23d16930c1d1eeb1bb1f7495e5a17cafe28a020afbc5640d9cca024b82563"
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.7/ikun-music-desktop-v3.3.0-fix.7-win7_x86-green.7z",
+            "hash": "aea199235ae5cb5245b120fe7e26e7f33049e5d8c1b68461fe1aafd284e5b61d"
         },
         "arm64": {
-            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.8/ikun-music-desktop-v3.3.0-fix.8-win_arm64-green.7z",
-            "hash": "16aebb39d1ce11fc9456c5b2fe9c580cb5add450712d3648fbb0d1aa45c59b8c"
+            "url": "https://github.com/ikunshare/ikun-music-desktop/releases/download/v3.3.0-fix.7/ikun-music-desktop-v3.3.0-fix.7-win_arm64-green.7z",
+            "hash": "688f2315074e10d99e4572146e29e6b5f8b6fa3c0cdcd89e66c865cdd5f5425b"
         }
     },
     "post_install": [
