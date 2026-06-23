@@ -1,5 +1,5 @@
 {
-    "version": "1.0.24.1006",
+    "version": "1.0.25.1108",
     "description": "ClashMI - A tool for managing network proxy settings.",
     "homepage": "https://clashmi.app/",
     "license": [
@@ -8,8 +8,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/KaringX/clashmi/releases/download/v1.0.24.1006/clashmi_1.0.24.1006_windows_x64.zip",
-            "hash": "64ad13e67ece3ab6f51e868b4b5b211535549aa998d2ce2ed89e3421e7819bc9"
+            "url": "https://github.com/KaringX/clashmi/releases/download/v1.0.25.1108/clashmi_1.0.25.1108_windows_x64.zip",
+            "hash": "88077f2e7060f3dbb7334d00f33e75391fb328505dca400b0a22142923bd424a"
         }
     },
     "post_install": [
