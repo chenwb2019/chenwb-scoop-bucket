@@ -1,13 +1,13 @@
 {
-    "version": "1.3.8",
+    "version": "1.3.9",
     "description": "A minimal writing application",
     "homepage": "https://gitee.com/knowshub/only-write",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-1.3.8/Windows-1.3.8.rar",
-            "hash": "5aa6291b788c5846110f78e7d8670937777e00751406029f774a4f90dc6c4396",
-            "extract_dir": "Windows-1.3.8"
+            "url": "https://gitee.com/knowshub/only-write/releases/download/Windows-1.3.9/Windows-1.3.9.rar",
+            "hash": "b1b0cf353ae4dbe33f515a6f4a5ab78ad7217b1e244c3c315497cf67f02ed17c",
+            "extract_dir": "Windows-1.3.9"
         }
     },
     "post_install": [
