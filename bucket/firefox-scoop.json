@@ -1,20 +1,20 @@
 {
-    "version": "154.0.1",
+    "version": "155.0",
     "description": "a free and open-source web browser developed by the Mozilla Foundation",
     "homepage": "https://www.mozilla.org/firefox/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ftp.mozilla.org/pub/firefox/releases/154.0.1/win64/zh-CN/Firefox%20Setup%20154.0.1.exe#/dl.7z",
-            "hash": "94fa46f85062cb3e4e5d62e62e0f54543fdd54e6c57ea4c7394b6a49baeb120b"
+            "url": "https://ftp.mozilla.org/pub/firefox/releases/155.0/win64/zh-CN/Firefox%20Setup%20155.0.exe#/dl.7z",
+            "hash": "9354b298343540f7baeda4906654988a197597125f099d6599fd43fcb3c6971c"
         },
         "32bit": {
-            "url": "https://ftp.mozilla.org/pub/firefox/releases/154.0.1/win32/zh-CN/Firefox%20Setup%20154.0.1.exe#/dl.7z",
-            "hash": "7d9394a43124b0ff694ec7f8a0078f20f02ccc5841667c8e9fe648bc8166787d"
+            "url": "https://ftp.mozilla.org/pub/firefox/releases/155.0/win32/zh-CN/Firefox%20Setup%20155.0.exe#/dl.7z",
+            "hash": "cee7e9d22d75f240a917c034f600c55ff28654d14730a55d9154512ac9ad1cf8"
         },
         "arm64": {
-            "url": "https://ftp.mozilla.org/pub/firefox/releases/154.0.1/win64-aarch64/zh-CN/Firefox%20Setup%20154.0.1.exe#/dl.7z",
-            "hash": "ee039b23c8bc6aa8b4085bffc9555c050c70efde8dfa4fd910ab2f8fcc91667c"
+            "url": "https://ftp.mozilla.org/pub/firefox/releases/155.0/win64-aarch64/zh-CN/Firefox%20Setup%20155.0.exe#/dl.7z",
+            "hash": "fee81e9adb7f070cb7ef4377d5cf65148172144933f3044e07f0de93708eb46d"
         }
     },
     "extract_dir": "core",
