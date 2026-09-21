@@ -18,7 +18,12 @@
     },
     "persist": "portable",
     "bin": "MusicFree.exe",
-    "shortcuts": [["MusicFree.exe", "MusicFree"]],
+    "shortcuts": [
+        [
+            "MusicFree.exe",
+            "MusicFree"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/maotoumao/MusicFreeDesktop"
     },

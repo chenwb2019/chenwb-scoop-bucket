@@ -7,7 +7,14 @@
     "url": "https://github.com/Twometer/NoFences/releases/download/v1.8/NoFences.exe",
     "hash": "c68515e759f13a6af53c6c83cf14894e5dad1f22ab5b3c3a4d81ad7425105e0f",
     "bin": "NoFences.exe",
-    "shortcuts": [["NoFences.exe", "NoFences", "", "NoFences.exe"]],
+    "shortcuts": [
+        [
+            "NoFences.exe",
+            "NoFences",
+            "",
+            "NoFences.exe"
+        ]
+    ],
     "post_install": [
         "$cc_root = \"$dir\".Replace('\\', '\\\\')",
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",

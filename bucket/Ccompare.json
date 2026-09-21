@@ -25,11 +25,14 @@
         "}",
         "reg import \"$dir\\install-context.reg\" 2>&1 | Out-Null"
     ],
-    "pre_uninstall": [
-        "reg import \"$dir\\uninstall-context.reg\" 2>&1 | Out-Null"
-    ],
+    "pre_uninstall": "reg import \"$dir\\uninstall-context.reg\" 2>&1 | Out-Null",
     "bin": "CCompare.exe",
-    "shortcuts": [["CCompare.exe", "CCompare"]],
+    "shortcuts": [
+        [
+            "CCompare.exe",
+            "CCompare"
+        ]
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {

@@ -15,17 +15,25 @@
             "extract_dir": "EasySpider_Windows_x32"
         }
     },
-    "persist": ["Data", "execution_instances", "tasks", "config.json"],
+    "persist": [
+        "Data",
+        "execution_instances",
+        "tasks",
+        "config.json"
+    ],
     "post_install": [
         "$datapath = Join-Path $env:AppData 'EasySpider'",
         ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
         "Move-Data_dir -data_dir $datapath -persist_dir \"$persist_dir\\cache\""
     ],
-    "pre_uninstall": [
-        "Remove-Item -Path (Join-Path $env:AppData 'EasySpider') -Recurse -Force -ErrorAction SilentlyContinue"
-    ],
+    "pre_uninstall": "Remove-Item -Path (Join-Path $env:AppData 'EasySpider') -Recurse -Force -ErrorAction SilentlyContinue",
     "bin": "EasySpider.exe",
-    "shortcuts": [["EasySpider.exe", "EasySpider"]],
+    "shortcuts": [
+        [
+            "EasySpider.exe",
+            "EasySpider"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/NaiboWang/EasySpider/releases/",
         "regex": "tag/v?([\\d.]+)\""

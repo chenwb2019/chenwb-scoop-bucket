@@ -10,12 +10,18 @@
     -   [x] Dotnet-scoop
     -   [ ] Doubao
     -   [ ] Douyin
-    -   [ ] DouyinSelection
     -   [x] ==DskManager==
     -   [x] EasySpider
+    -   [ ] EpicGames
     -   [x] ==Firefox-scoop==
+    -   [ ] Firefox-esr-scoop
+    -   [ ] Firefox-developer-scoop
+    -   [ ] Firefox-pure-scoop
+    -   [ ] GlossModManager
     -   [ ] ~~HEU-KMS-Activator~~
     -   [x] IKUN-Music
+    -   [ ] Listary-scoop
+    -   [ ] Listary-portable
     -   [ ] ~~Lucky~~
     -   [ ] MUMU-Player
     -   [x] Musicfree
@@ -26,6 +32,8 @@
     -   [x] See-Yue-Typora
     -   [ ] Steam
     -   [x] Steampp
+    -   [ ] ThunderBird
+    -   [ ] TinyBuilder
     -   [x] Typora-cn
     -   [x] Typora-free
     -   [x] ~~Typora-nightly~~

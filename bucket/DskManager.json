@@ -16,7 +16,12 @@
     ],
     "persist": "Db",
     "bin": "fsmainx64.exe",
-    "shortcuts": [["fsmainx64.exe", "Dskmanager"]],
+    "shortcuts": [
+        [
+            "fsmainx64.exe",
+            "Dskmanager"
+        ]
+    ],
     "checkver": {
         "url": "https://www.dskmanager.com/",
         "regex": "版本[:：]\\s([\\d.+]+)"

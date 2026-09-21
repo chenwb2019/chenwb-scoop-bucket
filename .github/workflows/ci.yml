@@ -63,3 +63,21 @@ jobs:
         run: |
           $env:SCOOP_HOME="$(Convert-Path '..\scoop_core')"
           .\bin\test.ps1
+  check_format:
+    name: Format
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Bucket
+        uses: actions/checkout@main
+      - name: Checkout Scoop
+        uses: actions/checkout@main
+        with:
+          repository: ScoopInstaller/Scoop
+          path: scoop_core
+      - name: Verify manifest formatting
+        shell: pwsh
+        run: |
+          $env:SCOOP_HOME="$(Convert-Path '..\scoop_core')"
+          .\bin\formatjson.ps1
+          git diff
+          git diff --exit-code
