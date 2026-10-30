@@ -18,11 +18,6 @@
         }
     },
     "extract_dir": "core",
-    "post_install": [
-        ". \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Functions.ps1\"",
-        "$profilePath = Join-Path $env:AppData 'Mozilla\\Firefox'",
-        "Move-Data_dir -data_dir $profilePath -persist_dir $persist_dir"
-    ],
     "bin": "firefox.exe",
     "shortcuts": [
         [
@@ -63,5 +58,10 @@
                 }
             }
         }
-    }
+    },
+    "post_install": "& \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Move-FirefoxProfiles.ps1\" -AppDir $dir -PersistDir $persist_dir",
+    "notes": [
+        "Close all Firefox windows before installing or updating. Profiles for this installation are automatically moved to Scoop persist, keeping junctions at their original paths.",
+        "The shared Firefox root and local caches are not moved. An existing Firefox root junction from the old manifest must be restored to a normal directory first."
+    ]
 }

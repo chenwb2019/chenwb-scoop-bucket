@@ -1,0 +1,72 @@
+{
+    "version": "160.0b2",
+    "description": "Firefox Developer Edition - a web browser with developer tools by Mozilla",
+    "homepage": "https://www.mozilla.org/firefox/developer/",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b2/win64/zh-CN/Firefox%20Setup%20160.0b2.exe#/dl.7z",
+            "hash": "84922832de6e8c0c5d6f7fed34b3d5ff64d7dccd1c8ea6c5285a0fcd25011488"
+        },
+        "32bit": {
+            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b2/win32/zh-CN/Firefox%20Setup%20160.0b2.exe#/dl.7z",
+            "hash": "0074d4bd834ca4b08c943bfb346a8a8b0f48fb16e9089340c6afcde28e69bd6b"
+        },
+        "arm64": {
+            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b2/win64-aarch64/zh-CN/Firefox%20Setup%20160.0b2.exe#/dl.7z",
+            "hash": "b5887e2581e8832cae7697b88dbcc6a6e7418695af0a15d2ac2ee8e5facee8b9"
+        }
+    },
+    "extract_dir": "core",
+    "bin": [
+        [
+            "firefox.exe",
+            "firefox-developer"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "firefox.exe",
+            "Firefox Developer Edition"
+        ],
+        [
+            "firefox.exe",
+            "Firefox Developer Edition Profile Manager",
+            "-P"
+        ]
+    ],
+    "checkver": {
+        "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+        "jsonpath": "$.FIREFOX_DEVEDITION"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ftp.mozilla.org/pub/devedition/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://ftp.mozilla.org/pub/devedition/releases/$version/SHA256SUMS",
+                    "regex": "$sha256\\s+win64/zh-CN/$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://ftp.mozilla.org/pub/devedition/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://ftp.mozilla.org/pub/devedition/releases/$version/SHA256SUMS",
+                    "regex": "$sha256\\s+win32/zh-CN/$basename"
+                }
+            },
+            "arm64": {
+                "url": "https://ftp.mozilla.org/pub/devedition/releases/$version/win64-aarch64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://ftp.mozilla.org/pub/devedition/releases/$version/SHA256SUMS",
+                    "regex": "$sha256\\s+win64-aarch64/zh-CN/$basename"
+                }
+            }
+        }
+    },
+    "post_install": "& \"$bucketsdir\\chenwb-scoop-bucket\\scripts\\Move-FirefoxProfiles.ps1\" -AppDir $dir -PersistDir $persist_dir",
+    "notes": [
+        "Close all Firefox windows before installing or updating. Profiles for this installation are automatically moved to Scoop persist, keeping junctions at their original paths.",
+        "The shared Firefox root and local caches are not moved. An existing Firefox root junction from the old manifest must be restored to a normal directory first."
+    ]
+}
