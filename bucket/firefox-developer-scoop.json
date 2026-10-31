@@ -1,20 +1,20 @@
 {
-    "version": "160.0b2",
+    "version": "160.0b3",
     "description": "Firefox Developer Edition - a web browser with developer tools by Mozilla",
     "homepage": "https://www.mozilla.org/firefox/developer/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b2/win64/zh-CN/Firefox%20Setup%20160.0b2.exe#/dl.7z",
-            "hash": "84922832de6e8c0c5d6f7fed34b3d5ff64d7dccd1c8ea6c5285a0fcd25011488"
+            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b3/win64/zh-CN/Firefox%20Setup%20160.0b3.exe#/dl.7z",
+            "hash": "6a22ebac16500aa1db408a60eb5675d67ca155da44fafbee46ae0535587884eb"
         },
         "32bit": {
-            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b2/win32/zh-CN/Firefox%20Setup%20160.0b2.exe#/dl.7z",
-            "hash": "0074d4bd834ca4b08c943bfb346a8a8b0f48fb16e9089340c6afcde28e69bd6b"
+            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b3/win32/zh-CN/Firefox%20Setup%20160.0b3.exe#/dl.7z",
+            "hash": "80224d33a50f2430b76ac383afcd1dd63bfb23ed897d21e78b95e95ef4292c38"
         },
         "arm64": {
-            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b2/win64-aarch64/zh-CN/Firefox%20Setup%20160.0b2.exe#/dl.7z",
-            "hash": "b5887e2581e8832cae7697b88dbcc6a6e7418695af0a15d2ac2ee8e5facee8b9"
+            "url": "https://ftp.mozilla.org/pub/devedition/releases/160.0b3/win64-aarch64/zh-CN/Firefox%20Setup%20160.0b3.exe#/dl.7z",
+            "hash": "fec7fc49a70cd0a7c3b9c0fdbc5e041d49d8230684cf8753a007a1207a37dc34"
         }
     },
     "extract_dir": "core",
